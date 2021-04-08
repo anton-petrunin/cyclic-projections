@@ -1,36 +1,42 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage{paper}
 
+\def\thetitle{Cyclic projections in Hadamard spaces}
+\def\theauthors{Alexander Lytchak and Anton Petrunin}
+\hypersetup{
+pdftitle={\thetitle},
+pdfauthor={\theauthors}
+}
+
 \begin{document}
 
-\title{Cyclic projections in Hadamard spaces}	
-\author{Alexander Lytchak and Anton Petrunin}
+
+\title{\thetitle}	
+\author{\theauthors}
 \date{\today}
-%\keywords{CAT(0), metric porjections, convex subset}
-%\subjclass[2010]{53C20, 53C21, 53C23}
 \maketitle
 
 \begin{abstract}
-	We  prove that  alternating projections onto convex subsets of Hadamard spaces can behave in a more complicated way than in Hilbert spaces, resolving a problem formulated by Miroslav Bacak. 	
+	We  prove that iterating projections onto convex subsets of Hadamard spaces can behave in a more complicated way than in Hilbert spaces, resolving a problem formulated by Miroslav Bacak. 	
 \end{abstract}
 
-
+%\keywords{CAT(0), metric porjections, convex subset}
+%\subjclass[2010]{53C20, 53C21, 53C23}
+%\pagestyle{empty}\thispagestyle{empty}
 
 \section{Introduction}
 
 
 Let  $C_1,\dots, C_k$ be closed convex subsets in a Hadamard space $X$.
-Denote by $P_i$ the closest-point projection $X\to C_i$; it sends a point $x\in X$ to the (nesesary unique) point in $C_i$ that minimize the distance to $x$.
+Denote by $P_i$ the closest-point projection $X\to C_i$; it sends a point $x\in X$ to the (necessarily unique) point in $C_i$ that minimize the distance to $x$.
 Given a point $x\in X$ consider the sequence $x_n=P^n(x)$, where
-$P= P_1\circ \dots \circ P_k$.  Various properties of   such compositions  $P$ and arising  sequences $x_n$
+$P= P_1\circ \dots \circ P_k$.
+Various properties of such compositions  $P$ and arising  sequences $x_n$
 are classical topics of research, especially in Hilbert spaces, originated from convex optimization, see \cite{Bac, Bac2, Bauschke}
 and the bibliography therein.
 
-
-
-
 If $X$ is a Hilbert space, then the fundamental result of Heinz Bauschke \cite{Bauschke,Kohlenbach}, states that the map $P$ is \emph{asymptotically regular}, that is, for any $x$, we have  $|x_n-x_{n+1}|\to 0$ as $n\to \infty$.
-In this note we show that this statement does not hold general Hadamard spaces, despite the fact that many related statements
+In this note we show that this statement does not hold in general Hadamard spaces, despite the fact that many related statements
 admit generalizations and, thus, depend only on the convexity properties of the distance functions and not on the linear structure. 
 That answers the question of Miroslav Bacak \cite[Problem 6.13]{Bac}.
 
@@ -41,7 +47,7 @@ Moreover, we can assume that $X$ is compact, $k=3$, each $C_i$ is isometric to t
 and $P$ is an isometry of $C_1$ that swaps its ends.
 \end{thm}
 
-The constructed space contains three convex flat quadrangles $Q_1$, $Q_2$, and $Q_3$ with pairs of opposite sides $(C_1,C_2)$, $(C_2,C_3)$, and $(C_3,C_1)$ and the union of the quadrangles is a Möbius band.
+The constructed space contains three convex flat quadrangles $Q_1$, $Q_2$, and $Q_3$ with pairs of opposite sides $(C_1,C_2)$, $(C_2,C_3)$, and $(C_3,C_1)$ such that the union of $Q_1\cup Q_2\cup Q_3$ is a Möbius band.
 
 If the sets $C_1,\dots,C_k$ have a common intersection, then such examples are impossible \cite{asymptotic,Bac2,Bac}.
 
@@ -52,17 +58,15 @@ On the other hand, in case of two subsets the result of  Heinz Bauschke \cite{Ba
 \begin{thm}{Proposition} \label{prop}
 For any two closed convex subsets $C_1,C_2$ of any Hadamard space $X$, for any starting point $x\in X$  the sequence $x_n = P^n (x)$ with $P=  P_1\circ P_2 :X\to C_1$ is asymptotically  regular.
 
-Moreover for any $x$ there is a constant $A$ such that 
+Moreover, for any $x$, there is a constant $A$ such that 
 $|x_n-x_{n+1}| \leq \frac  {A} {\sqrt n}$;
 where $|x_n-x_{n+1}|$ denotes the distance between the points $x_n$ and $x_{n+1}$ in $X$.
 \end{thm}
 
-
-\section{Two subsets}
-
-We will assume some familiarity with the geometry of Hadamard spaces, \cite{BH,AKP}.
+Further, we assume some familiarity with the geometry of Hadamard spaces \cite{BBI,BH,AKP,AKP_inv,ballmannbook}.
 
 
+\section{Two sets}
 
 
 \begin{proof}[Proof of \ref{prop}]
@@ -70,8 +74,8 @@ By definition,  $x_n \in C_1$ for all $n$.
 Set $y_n= P_2 (x_n)$, so $y_n$ is the closest-point projection of $x_n$ to $C_2$.
 Further set 
 \begin{align*}
-r_n:=|x_n-x_{n+1}|,
-s_n:=|y_n-y_{n+1}|,
+r_n&:=|x_n-x_{n+1}|,\\
+s_n&:=|y_n-y_{n+1}|.
 \end{align*}
 Note that 
 \[r_1 \geq s_1 \geq r_2\geq s_2\geq\dots
@@ -87,7 +91,9 @@ Note that
 \[a_1 \geq b_1 \geq a_2 \geq b_2 \geq \dots
 \eqlbl{eq:abababa}\]
 
-The CAT(0) comparison implies that 
+Since $C_1$ is convex and $x_{n+1}\in C_1$ lies at the minimal distance from $y_n$, we have $\measuredangle[x_{n+1}\,{}^{x_n}_{y_n}]\ge \tfrac\pi2$. 
+By CAT(0) comparison, $\tilde\measuredangle(x_{n+1}\,{}^{x_n}_{y_n})\ge \tfrac\pi2$.
+It implies that 
 \[r_n^2  \leq a_n^2-b_n^2.\]
 Therefore \ref{eq:abababa} implies that 
 \[\sum_{n} r_n ^2\le a_1^2.\]
@@ -95,13 +101,14 @@ By \ref{eq:rsrsrsrs}, $r_n$ is non-increasing.
 Therefore $r_n \leq \tfrac A {\sqrt{n}}$, for some constant~$A$.
 \end{proof}
 
-\section{Main example}
+\section{Three sets}
 
 \begin{proof}[Proof of Theorem \ref{thm}]
 Fix a small $\epsilon >0$.
-Consider the round sphere~$\mathbb{S}^2$ and the closed 
-$\epsilon$-neighborhood $A$  of its equator.
-The space $A$ is locally CAT(1) \cite{ABB-1993}, \cite{LWcurv}.
+Consider the unit sphere~$\mathbb{S}^2$ and the closed 
+$\epsilon$-neighborhood $A$ of its equator.
+The space $A$ is locally CAT(1);
+one can get it as a corollary of the result in \cite{LWcurv}.
 The universal cover $\tilde A$ of $A$ with its induced metric is locally CAT(1) as well. 
 
 Denote by $E$ the preimage of the equator in $\tilde A$  and by $H^{\pm}$ the boundary curves of the stripe $\tilde A$, which are both convex in $\tilde A$.
@@ -112,44 +119,44 @@ Let $g$   be the composition of translation along $E$  of length $2\pi +10\cdot\
 The element $g$ generates a discrete group $\Gamma$ isomorphic to $\mathbb Z$ in the group of isometries  of $\tilde A$.
 The group $\Gamma$ acts freely on $\tilde A$ and the quotient space $Y =\tilde A/\Gamma$ is a Möbius band.
 
-If $\eps$ is sufficiently small,  that every point of $\tilde A$ is moved by any element of $\Gamma$ more than $2\cdot\pi$ away from it.
-It implies that the locally CAT(1) space $Y$ does not  contain geodesics of length less than $2\pi$, hence $Y$ is CAT(1).
+Since $\eps$ is small, every point of $\tilde A$ is moved by any element of $\Gamma$ more than $2\cdot\pi$ away from it.
+It implies that the compact locally CAT(1) space $Y$ does not  contain geodesics of length less than $2\pi$;
+hence, by  the generalized Hadamard--Cartan theorem \cite{AKP}, $Y$ is CAT(1).
 By construction, $Y$ is locally isometric to $\mathbb{S}^2$ outside its boundary curve $B$.
 The projection of $E$ to $Y$ is a closed geodesic $G$ of length $2\pi +10\cdot\epsilon$.
 
-Denote by $X$ the Euclidean cone over $Y$.
-The space $X$ is CAT(0)  \cite{BBI}.
+Denote by $X$ the Euclidean cone over $Y$;
+since $Y$ is CAT(1), we get that $X$ is CAT(0); see \cite{AKP}.
 Moreover, $X$ is locally Euclidean outside its \emph{boundary} --- the cone over $B$.
 
 The cone $Z$ over the closed geodesic $G$ is  the Euclidean cone over a circle of length $2\pi +10\cdot\epsilon$. By construction,
-$Z$ is a locally covex, hence a convex subset of~$X$.
-%In the space $Z$ is isometric to a cone over a circle of length $2\pi +10\cdot\epsilon$.
-Let us consider a triangle
-$\Delta := q_1,q_2,q_3$   (thus 3 geodesic segments)
-in $Z$, which contains the origin $o$ of the cone $Z$ in the interior of the simple closed $\Delta$ within the topological plane $Z$.
+$Z$ is locally convex, hence a convex subset of~$X$.
+Let us consider a geodesic triangle
+$[q_1q_2q_3]$
+in $Z$ that surrounds the origin $o$ of the cone $Z$.
 
 By construction, the triangle $[q_1q_2q_3]$ is contained in the flat part of $X$.
-Thus, we can find a small neighborhood $U_1$ of the geodesic $[q_1q_2]$ isometric to a convex subset of the Euclidean space.
-Similarly, we find neighborhood $U_2$ of $[q_2q_3]$ and $U_3$ of $[q_3q_1]$.
-We find some $r>0$, such that the $r$-neighborhood of $[q_iq_{i+1}]$ is completely contained in $U_i$.
+Thus, we can find a small $r>0$ such that the $r$-neighborhood $U_1$ of the geodesic $[q_1q_2]$ isometric to a convex subset of the Euclidean space.
+We can assume that $r$-neighborhoods $U_2$ of $[q_2q_3]$ and $U_3$ of $[q_3q_1]$ have the same property.
 
-Denote by $C_i$ the segment centered at $q_i$ and being orthogonal to $Z$ at $q_i$.
-By construction, $C_i$ and $C_{i+1}$, for $i=1,2,3$   are contained in $U_i$.
+Denote by $C_i$ the segment of length $r$ centered at $q_i$ and being orthogonal to $Z$ at $q_i$.
+By construction, $C_i$ and $C_{i+1}$, for $i=1,2,3\pmod 3$   are contained in~$U_i$.
 Since $Z$ is convex, $C_i$ and $C_{i+1}$ are \emph{parallel} inside $U_i$, thus their convex hull  $Q_i$ is isometric to a rectangle with two opposite sides given by $C_i$ and $C_{i+1}$.
 In particular, the metric projection from $C_{i+1}$ to $C_{i}$ is an isometry.
 
-By topological reasons, the union of $Q_1,Q_2,Q_3$ is homeomorphic to the Möbius band.
+Note that the central projection $Q_1\cup Q_2\cup Q_3\to Y$ is an embedding.
+It follows that the union $Q_1\cup Q_2\cup Q_3$ is homeomorphic to the Möbius band.
 Thus, \emph{going around} we change the orientation of $C_1$.
-This just means, that the composition $P:C_1\to C_1$, which is an isometry by construction, changes the orientation of the 
+It means, that the composition $P:C_1\to C_1$ (which is an isometry by construction) changes the orientation of the 
 segment $C_1$.
 
-The constructed space $X$ is not compact, but  the convex subsets $C_1,C_2,C_3$ are contained in some closed  ball of some radius around the vertex.  We finish the construction replacing $X$ by any such ball.	
+The constructed space $X$ is not compact, but  the convex subsets $C_1,C_2,C_3$ are contained in some closed  ball of some radius around the vertex.  We finish the construction replacing $X$ with any such ball.	
 \end{proof}
 
 The same construction works in higher dimensions.
-Namely, instead of $A$ we may choose a tubular neighborhood of a closed geodesic in $\mathbb{S}^m$;
+Namely, instead of $A$, we may choose a tubular neighborhood of a closed geodesic in $\mathbb{S}^m$;
 by the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite{ABB-1993}, the space $A$ is CAT(1).
-Insted of $g$ we may take glide rotation of the $\tilde A$.
+Instead of $g$, we may take glide rotation of the $\tilde A$.
 That gives a variation of the construction with $C_i$ isometric to a Euclidean disc and $P$ acting on $C_1$ by arbitrary rotation.
 
 {\sloppy
