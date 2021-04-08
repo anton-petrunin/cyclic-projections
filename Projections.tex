@@ -3,7 +3,7 @@
 
 \begin{document}
 
-\title{Cyclic projections in Hadamard space}	
+\title{Cyclic projections in Hadamard spaces}	
 \author{Alexander Lytchak and Anton Petrunin}
 \date{\today}
 %\keywords{CAT(0), metric porjections, convex subset}
@@ -11,7 +11,7 @@
 \maketitle
 
 \begin{abstract}
-We resolve a problem of Miroslav Bacak by showing that Bauschke theorem cannot be generalized to Hadamard spaces.
+	We  prove that  alternating projections onto convex subsets of Hadamard spaces can behave in a more complicated way than in Hilbert spaces, resolving a problem formulated by Miroslav Bacak. 	
 \end{abstract}
 
 
@@ -22,10 +22,16 @@ We resolve a problem of Miroslav Bacak by showing that Bauschke theorem cannot b
 Let  $C_1,\dots, C_k$ be closed convex subsets in a Hadamard space $X$.
 Denote by $P_i$ the closest-point projection $X\to C_i$; it sends a point $x\in X$ to the (nesesary unique) point in $C_i$ that minimize the distance to $x$.
 Given a point $x\in X$ consider the sequence $x_n=P^n(x)$, where
-$P= P_1\circ \dots \circ P_k$.
+$P= P_1\circ \dots \circ P_k$.  Various properties of   such compositions  $P$ and arising  sequences $x_n$
+are classical topics of research, especially in Hilbert spaces, originated from convex optimization, see \cite{Bac, Bac2, Bauschke}
+and the bibliography therein.
 
-If $X$ is a Hilbert space, then the fundamental result of Heinz Bauschke \cite{Bauschke,Kohlenbach}, states that the map $P$ is \emph{asymptotically regular}, that is, for any $x$, we have  $|x_n-x_{n+1}|\to0$ as $n\to \infty$.
-In this note we show that this statement does not hold general Hadamard space.
+
+
+
+If $X$ is a Hilbert space, then the fundamental result of Heinz Bauschke \cite{Bauschke,Kohlenbach}, states that the map $P$ is \emph{asymptotically regular}, that is, for any $x$, we have  $|x_n-x_{n+1}|\to 0$ as $n\to \infty$.
+In this note we show that this statement does not hold general Hadamard spaces, despite the fact that many related statements
+admit generalizations and, thus, depend only on the convexity properties of the distance functions and not on the linear structure. 
 That answers the question of Miroslav Bacak \cite[Problem 6.13]{Bac}.
 
 \begin{thm}{Theorem}\label{thm}
@@ -47,15 +53,17 @@ On the other hand, in case of two subsets the result of  Heinz Bauschke \cite{Ba
 For any two closed convex subsets $C_1,C_2$ of any Hadamard space $X$, for any starting point $x\in X$  the sequence $x_n = P^n (x)$ with $P=  P_1\circ P_2 :X\to C_1$ is asymptotically  regular.
 
 Moreover for any $x$ there is a constant $A$ such that 
-$|x_n-x_{n+1}| \leq \frac  {A} {\sqrt m}$,
-where $x_n=P^n(x)$;
-here we $|x_n-x_{n+1}|$ denotes the distance between the points $x_n$ and $x_{n+1}$ in $X$.
+$|x_n-x_{n+1}| \leq \frac  {A} {\sqrt n}$;
+where $|x_n-x_{n+1}|$ denotes the distance between the points $x_n$ and $x_{n+1}$ in $X$.
 \end{thm}
 
 
 \section{Two subsets}
 
-We will assume some familiarity with the geometry of CAT(0) spaces, \cite{BH,AKP}.
+We will assume some familiarity with the geometry of Hadamard spaces, \cite{BH,AKP}.
+
+
+
 
 \begin{proof}[Proof of \ref{prop}]
 By definition,  $x_n \in C_1$ for all $n$.
@@ -93,7 +101,7 @@ Therefore $r_n \leq \tfrac A {\sqrt{n}}$, for some constant~$A$.
 Fix a small $\epsilon >0$.
 Consider the round sphere~$\mathbb{S}^2$ and the closed 
 $\epsilon$-neighborhood $A$  of its equator.
-The space $A$ is locally CAT(1) \cite{LWcurv}.
+The space $A$ is locally CAT(1) \cite{ABB-1993}, \cite{LWcurv}.
 The universal cover $\tilde A$ of $A$ with its induced metric is locally CAT(1) as well. 
 
 Denote by $E$ the preimage of the equator in $\tilde A$  and by $H^{\pm}$ the boundary curves of the stripe $\tilde A$, which are both convex in $\tilde A$.
@@ -104,7 +112,7 @@ Let $g$   be the composition of translation along $E$  of length $2\pi +10\cdot\
 The element $g$ generates a discrete group $\Gamma$ isomorphic to $\mathbb Z$ in the group of isometries  of $\tilde A$.
 The group $\Gamma$ acts freely on $\tilde A$ and the quotient space $Y =\tilde A/\Gamma$ is a Möbius band.
 
-Since $\eps$ is small, it is easy to see that every point of $\tilde A$ is moved by any element of $\Gamma$ more than $2\cdot\pi$ away from it.
+If $\eps$ is sufficiently small,  that every point of $\tilde A$ is moved by any element of $\Gamma$ more than $2\cdot\pi$ away from it.
 It implies that the locally CAT(1) space $Y$ does not  contain geodesics of length less than $2\pi$, hence $Y$ is CAT(1).
 By construction, $Y$ is locally isometric to $\mathbb{S}^2$ outside its boundary curve $B$.
 The projection of $E$ to $Y$ is a closed geodesic $G$ of length $2\pi +10\cdot\epsilon$.
@@ -113,11 +121,12 @@ Denote by $X$ the Euclidean cone over $Y$.
 The space $X$ is CAT(0)  \cite{BBI}.
 Moreover, $X$ is locally Euclidean outside its \emph{boundary} --- the cone over $B$.
 
-The cone $Z$ over the closed geodesic $G$ is a locally covex, hence a convex subset of~$X$.
-In the space $Z$ is isometric to a cone over a circle of length $2\pi +10\cdot\epsilon$.
+The cone $Z$ over the closed geodesic $G$ is  the Euclidean cone over a circle of length $2\pi +10\cdot\epsilon$. By construction,
+$Z$ is a locally covex, hence a convex subset of~$X$.
+%In the space $Z$ is isometric to a cone over a circle of length $2\pi +10\cdot\epsilon$.
 Let us consider a triangle
-$q_1,q_2,q_3$ 
-in $Z$, which contains the origin $o$ of the cone in its interior.
+$\Delta := q_1,q_2,q_3$   (thus 3 geodesic segments)
+in $Z$, which contains the origin $o$ of the cone $Z$ in the interior of the simple closed $\Delta$ within the topological plane $Z$.
 
 By construction, the triangle $[q_1q_2q_3]$ is contained in the flat part of $X$.
 Thus, we can find a small neighborhood $U_1$ of the geodesic $[q_1q_2]$ isometric to a convex subset of the Euclidean space.
@@ -130,8 +139,11 @@ Since $Z$ is convex, $C_i$ and $C_{i+1}$ are \emph{parallel} inside $U_i$, thus 
 In particular, the metric projection from $C_{i+1}$ to $C_{i}$ is an isometry.
 
 By topological reasons, the union of $Q_1,Q_2,Q_3$ is homeomorphic to the Möbius band.
-Thus, going \emph{around} we change the orientation of $C_1$.
-This just means, that the composition $P:C_1\to C_1$, which is an isometry by construction, changes the orientation of the segment $C_1$.	
+Thus, \emph{going around} we change the orientation of $C_1$.
+This just means, that the composition $P:C_1\to C_1$, which is an isometry by construction, changes the orientation of the 
+segment $C_1$.
+
+The constructed space $X$ is not compact, but  the convex subsets $C_1,C_2,C_3$ are contained in some closed  ball of some radius around the vertex.  We finish the construction replacing $X$ by any such ball.	
 \end{proof}
 
 The same construction works in higher dimensions.
