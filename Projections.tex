@@ -43,7 +43,7 @@ That answers the question of Miroslav Bacak \cite[Problem 6.13]{Bac}.
 \begin{thm}{Theorem}\label{thm}
 There exists a Hadamard space $X$ and closed convex subsets $C_1,\dots,C_k$ in $X$ such that the composition of the closest-point projections $P= P_1\circ \dots \circ P_k$ is not asymptotically regular.
 
-Moreover, we can assume that $X$ is compact, $k=3$, each $C_i$ is isometric to the unit interval $[0,1]$, 
+Moreover, we can arrange that $X$ is compact, $k=3$, each $C_i$ is isometric to the unit interval $[0,1]$, 
 and $P$ is an isometry of $C_1$ that swaps its ends.
 \end{thm}
 
@@ -65,15 +65,11 @@ where $|x_n-x_{n+1}|$ denotes the distance between the points $x_n$ and $x_{n+1}
 
 Further, we assume some familiarity with the geometry of Hadamard spaces \cite{BBI,BH,AKP,AKP_inv,ballmannbook}.
 
+
 \section{Two sets}
 
-\begin{wrapfigure}{r}{50mm}
-\vskip-6mm
-\centering
-\includegraphics{mppics/pic-10}
-\end{wrapfigure}
 
-\mbox{\parit{Proof of \ref{prop}.}}
+\begin{proof}[Proof of \ref{prop}]
 By definition,  $x_n \in C_1$ for all $n$.
 Set $y_n= P_2 (x_n)$, so $y_n$ is the closest-point projection of $x_n$ to $C_2$.
 Further set 
@@ -81,12 +77,10 @@ Further set
 r_n&:=|x_n-x_{n+1}|,\\
 s_n&:=|y_n-y_{n+1}|.
 \end{align*}
-Since the closest-point projection is nonexpanding,
+Note that 
 \[r_1 \geq s_1 \geq r_2\geq s_2\geq\dots
 \eqlbl{eq:rsrsrsrs}
 \]
-
-
 
 Set
 \begin{align*}
@@ -98,23 +92,24 @@ Note that
 \eqlbl{eq:abababa}\]
 
 Since $C_1$ is convex and $x_{n+1}\in C_1$ lies at the minimal distance from $y_n$, we have $\measuredangle[x_{n+1}\,{}^{x_n}_{y_n}]\ge \tfrac\pi2$. 
-By CAT(0) comparison, $\tilde\measuredangle(x_{n+1}\,{}^{x_n}_{y_n})\ge \tfrac\pi2$.
-It implies that 
+By CAT(0) comparison
+% $\tilde\measuredangle(x_{n+1}\,{}^{x_n}_{y_n})\ge \tfrac\pi2$.
+%it implies that 
 \[r_n^2  \leq a_n^2-b_n^2.\]
 Therefore \ref{eq:abababa} implies that 
 \[\sum_{n} r_n ^2\le a_1^2.\]
 By \ref{eq:rsrsrsrs}, $r_n$ is non-increasing.
 Therefore $r_n \leq \tfrac A {\sqrt{n}}$, for some constant~$A$.
-\qeds
+\end{proof}
 
 \section{Three sets}
 
-\parit{Proof \ref{thm}.}
+\begin{proof}[Proof of Theorem \ref{thm}]
 Fix a small $\epsilon >0$.
 Consider the unit sphere~$\mathbb{S}^2$ and the closed 
 $\epsilon$-neighborhood $A$ of its equator.
-The space $A$ is locally CAT(1);
-one can get it as a corollary of the result in \cite{LWcurv}.
+The space $A$ is locally CAT(1) by \cite {ABB-1993}.
+%one can get it as a corollary of the result in \cite{LWcurv}.
 The universal cover $\tilde A$ of $A$ with its induced metric is locally CAT(1) as well. 
 
 Denote by $E$ the preimage of the equator in $\tilde A$  and by $H^{\pm}$ the boundary curves of the stripe $\tilde A$, which are both convex in $\tilde A$.
@@ -156,13 +151,14 @@ Thus, \emph{going around} we change the orientation of $C_1$.
 It means, that the composition $P:C_1\to C_1$ (which is an isometry by construction) changes the orientation of the 
 segment $C_1$.
 
-The constructed space $X$ is not compact, but  the convex subsets $C_1,C_2,C_3$ are contained in some closed  ball of some radius around the vertex.  We finish the construction replacing $X$ with any such ball.\qeds
+The constructed space $X$ is not compact, but  the convex subsets $C_1,C_2,C_3$ are contained in some closed  ball of some radius around the vertex.  We finish the construction replacing $X$ with any such ball.	
+\end{proof}
 
 The same construction works in higher dimensions.
 Namely, instead of $A$, we may choose a tubular neighborhood of a closed geodesic in $\mathbb{S}^m$;
 by the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite{ABB-1993}, the space $A$ is CAT(1).
 Instead of $g$, we may take glide rotation of the $\tilde A$.
-That gives a variation of the construction with $C_i$ isometric to a Euclidean disc and $P$ acting on $C_1$ by arbitrary rotation.
+That gives a variation of the construction with $C_i$ isometric to a Euclidean disc and $P$ acting on $C_1$ by an arbitrary rotation.
 
 {\sloppy
 \printbibliography[heading=bibintoc]
