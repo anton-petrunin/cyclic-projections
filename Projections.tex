@@ -65,11 +65,15 @@ where $|x_n-x_{n+1}|$ denotes the distance between the points $x_n$ and $x_{n+1}
 
 Further, we assume some familiarity with the geometry of Hadamard spaces \cite{BBI,BH,AKP,AKP_inv,ballmannbook}.
 
-
 \section{Two sets}
 
+\begin{wrapfigure}{r}{50mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-10}
+\end{wrapfigure}
 
-\begin{proof}[Proof of \ref{prop}]
+\mbox{\parit{Proof of \ref{prop}.}}
 By definition,  $x_n \in C_1$ for all $n$.
 Set $y_n= P_2 (x_n)$, so $y_n$ is the closest-point projection of $x_n$ to $C_2$.
 Further set 
@@ -77,10 +81,12 @@ Further set
 r_n&:=|x_n-x_{n+1}|,\\
 s_n&:=|y_n-y_{n+1}|.
 \end{align*}
-Note that 
+Since the closest-point projection is nonexpanding,
 \[r_1 \geq s_1 \geq r_2\geq s_2\geq\dots
 \eqlbl{eq:rsrsrsrs}
 \]
+
+
 
 Set
 \begin{align*}
@@ -99,11 +105,11 @@ Therefore \ref{eq:abababa} implies that
 \[\sum_{n} r_n ^2\le a_1^2.\]
 By \ref{eq:rsrsrsrs}, $r_n$ is non-increasing.
 Therefore $r_n \leq \tfrac A {\sqrt{n}}$, for some constant~$A$.
-\end{proof}
+\qeds
 
 \section{Three sets}
 
-\begin{proof}[Proof of Theorem \ref{thm}]
+\parit{Proof \ref{thm}.}
 Fix a small $\epsilon >0$.
 Consider the unit sphere~$\mathbb{S}^2$ and the closed 
 $\epsilon$-neighborhood $A$ of its equator.
@@ -150,8 +156,7 @@ Thus, \emph{going around} we change the orientation of $C_1$.
 It means, that the composition $P:C_1\to C_1$ (which is an isometry by construction) changes the orientation of the 
 segment $C_1$.
 
-The constructed space $X$ is not compact, but  the convex subsets $C_1,C_2,C_3$ are contained in some closed  ball of some radius around the vertex.  We finish the construction replacing $X$ with any such ball.	
-\end{proof}
+The constructed space $X$ is not compact, but  the convex subsets $C_1,C_2,C_3$ are contained in some closed  ball of some radius around the vertex.  We finish the construction replacing $X$ with any such ball.\qeds
 
 The same construction works in higher dimensions.
 Namely, instead of $A$, we may choose a tubular neighborhood of a closed geodesic in $\mathbb{S}^m$;
