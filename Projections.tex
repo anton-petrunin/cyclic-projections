@@ -21,7 +21,7 @@ pdfauthor={\theauthors}
 \end{abstract}
 
 %\begin{keywords}
-%CAT(0), metric porjections, convex subset
+%CAT(0), Hadamard space, asymptotic regularity, metric projection
 %\end{keywords}
 %\subjclass[2010]{53C20, 53C21, 53C23}
 %\pagestyle{empty}\thispagestyle{empty}
@@ -34,7 +34,7 @@ Denote by $P_i$ the closest-point projection $X\to C_i$; it sends a point $x\in 
 Given a point $x\in X$ consider the sequence $x_n=P^n(x)$, where
 $P= P_1\circ \dots \circ P_k$.
 Various properties of such compositions  $P$ and arising  sequences $x_n$
-are classical topics of research, especially in Hilbert spaces, originated from convex optimization, see \cite{Bac, Bac2, Bauschke}
+are classical topics of research, especially in Hilbert spaces, originated from convex optimization, see \cite{Bac, Bac2, Bauschke, bauschke-borwein-lewis,deutsch-hundal}
 and the bibliography therein.
 
 If $X$ is a Hilbert space, then the fundamental result of Heinz Bauschke \cite{Bauschke,Kohlenbach}, states that the map $P$ is \emph{asymptotically regular}, that is, for any $x$, we have  $|x_n-x_{n+1}|\to 0$ as $n\to \infty$.
@@ -43,7 +43,7 @@ admit generalizations and, thus, depend only on the convexity properties of the 
 That answers the question of Miroslav Bacak \cite[Problem 6.13]{Bac}.
 
 \begin{thm}{Theorem}\label{thm}
-There exists a Hadamard space $X$ and closed convex subsets $C_1,\dots,C_k$ in $X$ such that the composition of the closest-point projections $P= P_1\circ \dots \circ P_k$ is not asymptotically regular.
+There exists a Hadamard space $X$ and closed convex subsets $C_1,\dots,C_k$ in $X$ such that the composition of the closest-point projections $P\z= P_1\circ \dots \circ P_k$ is not asymptotically regular.
 
 Moreover, we can arrange that $X$ is compact, $k=3$, each $C_i$ is isometric to the unit interval $[0,1]$, 
 and $P$ is an isometry of $C_1$ that swaps its ends.
@@ -54,18 +54,29 @@ The constructed space contains three convex flat quadrangles $Q_1$, $Q_2$, and $
 If the sets $C_1,\dots,C_k$ have a common intersection, then such examples are impossible \cite{asymptotic,Bac2,Bac}.
 
 It is possible to vary the construction and obtain a compact Hadamard space $X$ and a finite sequence of convex subsets $C_1,\dots,C_k$ all isometric to the unit disc, such that the composition $P=P_1\circ \dots\circ      P_k :C_1\to C_1$  is a rotation of the disc by an arbitrary (especially an irrational) angle.
+Our examples are at least 3-dimensional, but there are 2-dimensional examples as well.
+They can be found among affine buildings of type $\tilde B_2$; see the last remark in the introduction of \cite{balser}. 
 
 On the other hand, in case of two subsets the result of  Heinz Bauschke \cite{Bauschke} admits a generalization:
 
 \begin{thm}{Proposition} \label{prop}
-For any two closed convex subsets $C_1,C_2$ of any Hadamard space $X$, for any starting point $x\in X$  the sequence $x_n = P^n (x)$ with $P=  P_1\circ P_2 :X\to C_1$ is asymptotically  regular.
+For any two closed convex subsets $C_1,C_2$ of any Hadamard space $X$, for any starting point $x\in X$  the sequence $x_n \z= P^n (x)$ with $P\z=  P_1\circ P_2 :X\to C_1$ is asymptotically  regular.
 
 Moreover, for any $x$, there is a constant $A$ such that 
-$|x_n-x_{n+1}| \leq \frac  {A} {\sqrt n}$;
+$|x_n-x_{n+1}| =o (\frac  {1} {\sqrt n})$;
 where $|x_n-x_{n+1}|$ denotes the distance between the points $x_n$ and $x_{n+1}$ in $X$.
 \end{thm}
 
+Examples given by the real axes $C_1 \subset \R^2$ and the
+\[C_2  = \{\,(x,y):x>0, y \geq 1+ x^{ -\epsilon}\,\}\]
+reveal that the convergence rate cannot be improved to $O (n^{-\frac 1 2  -\epsilon})$ for any $\epsilon >0$.
+
 Further, we assume some familiarity with the geometry of Hadamard spaces \cite{BBI,BH,AKP,AKP_inv,ballmannbook}.
+
+\parbf{Acknowledgments.}
+We thank Miroslav Bačák and Nina Lebedeva for helpful comments and conversations.
+Alexander Lytchak was partially supported by the DFG grant, no. 281071066, TRR 191.
+Anton Petrunin was partially supported by the NSF grant, DMS-2005279.
 
 
 \section{Two sets}
@@ -107,7 +118,7 @@ By CAT(0) comparison
 Therefore \ref{eq:abababa} implies that 
 \[\sum_{n} r_n ^2\le a_1^2.\]
 By \ref{eq:rsrsrsrs}, $r_n$ is non-increasing.
-Therefore $r_n \leq \tfrac A {\sqrt{n}}$, for some constant~$A$.
+Therefore $r_n = o(\tfrac1{\sqrt{n}})$.
 \qeds
 
 \section{Three sets}
