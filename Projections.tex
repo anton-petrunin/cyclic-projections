@@ -49,9 +49,9 @@ Moreover, we can arrange that $X$ is compact, $k=3$, each $C_i$ is isometric to 
 and $P$ is an isometry of $C_1$ that swaps its ends.
 \end{thm}
 
-The constructed space contains three convex flat quadrangles $Q_1$, $Q_2$, and $Q_3$ with pairs of opposite sides $(C_1,C_2)$, $(C_2,C_3)$, and $(C_3,C_1)$ such that the union of $Q_1\cup Q_2\cup Q_3$ is a Möbius band.
-
 If the sets $C_1,\dots,C_k$ have a common intersection, then such examples are impossible \cite{asymptotic,Bac2,Bac}.
+
+The constructed space contains three convex flat quadrangles $Q_1$, $Q_2$, and $Q_3$ with pairs of opposite sides $(C_1,C_2)$, $(C_2,C_3)$, and $(C_3,C_1)$ such that the union of $Q_1\cup Q_2\cup Q_3$ is a Möbius band.
 
 It is possible to vary the construction and obtain a compact Hadamard space $X$ and a finite sequence of convex subsets $C_1,\dots,C_k$ all isometric to the unit disc, such that the composition $P=P_1\circ \dots\circ      P_k :C_1\to C_1$  is a rotation of the disc by an arbitrary (especially an irrational) angle.
 Our examples are at least 3-dimensional, but there are 2-dimensional examples as well.
@@ -62,12 +62,12 @@ On the other hand, in case of two subsets the result of  Heinz Bauschke \cite{Ba
 \begin{thm}{Proposition} \label{prop}
 For any two closed convex subsets $C_1,C_2$ of any Hadamard space $X$, for any starting point $x\in X$  the sequence $x_n \z= P^n (x)$ with $P\z=  P_1\circ P_2 :X\to C_1$ is asymptotically  regular.
 
-Moreover, for any $x$, there is a constant $A$ such that 
+Moreover, 
 $|x_n-x_{n+1}| =o (\frac  {1} {\sqrt n})$;
 where $|x_n-x_{n+1}|$ denotes the distance between the points $x_n$ and $x_{n+1}$ in $X$.
 \end{thm}
 
-Examples given by the real axes $C_1 \subset \R^2$ and the
+Examples given by the real axes $C_1 \subset \R^2$ and the set
 \[C_2  = \{\,(x,y):x>0, y \geq 1+ x^{ -\epsilon}\,\}\]
 reveal that the convergence rate cannot be improved to $O (n^{-\frac 1 2  -\epsilon})$ for any $\epsilon >0$.
 
@@ -127,7 +127,7 @@ Therefore $r_n = o(\tfrac1{\sqrt{n}})$.
 Fix a small $\epsilon >0$.
 Consider the unit sphere~$\mathbb{S}^2$ and the closed 
 $\epsilon$-neighborhood $A$ of its equator.
-The space $A$ is locally CAT(1) by \cite {ABB-1993}.
+The space $A$ is locally CAT(1) by the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite {ABB-1993}.
 %one can get it as a corollary of the result in \cite{LWcurv}.
 The universal cover $\tilde A$ of $A$ with its induced metric is locally CAT(1) as well. 
 
@@ -140,7 +140,7 @@ The element $g$ generates a discrete group $\Gamma$ isomorphic to $\mathbb Z$ in
 The group $\Gamma$ acts freely on $\tilde A$ and the quotient space $Y =\tilde A/\Gamma$ is a Möbius band.
 
 Since $\eps$ is small, every point of $\tilde A$ is moved by any element of $\Gamma$ more than $2\cdot\pi$ away from it.
-It implies that the compact locally CAT(1) space $Y$ does not  contain geodesics of length less than $2\pi$;
+It implies that the compact locally CAT(1) space $Y$ does not contain closed geodesics of length less than $2\pi$;
 hence, by  the generalized Hadamard--Cartan theorem \cite{AKP}, $Y$ is CAT(1).
 By construction, $Y$ is locally isometric to $\mathbb{S}^2$ outside its boundary curve $B$.
 The projection of $E$ to $Y$ is a closed geodesic $G$ of length $2\pi +10\cdot\epsilon$.
@@ -170,13 +170,14 @@ Thus, \emph{going around} we change the orientation of $C_1$.
 It means, that the composition $P:C_1\to C_1$ (which is an isometry by construction) changes the orientation of the 
 segment $C_1$.
 
-The constructed space $X$ is not compact, but  the convex subsets $C_1,C_2,C_3$ are contained in some closed  ball of some radius around the vertex.  We finish the construction replacing $X$ with any such ball.	
+The constructed space $X$ is not compact, but  the convex subsets $C_1,C_2,C_3$ are contained in a closed ball.
+We finish the construction replacing $X$ with any such ball.
 \qeds
 
 The same construction works in higher dimensions.
-Namely, instead of $A$, we may choose a tubular neighborhood of a closed geodesic in $\mathbb{S}^m$;
-by the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite{ABB-1993}, the space $A$ is CAT(1).
-Instead of $g$, we may take glide rotation of the $\tilde A$.
+Namely, instead of $A$, we may choose a tubular neighborhood of a closed geodesic in $\mathbb{S}^4$;
+by \cite{ABB-1993}, the space $A$ is CAT(1).
+Instead of $g$, we may take a glide rotation of $\tilde A$.
 That gives a variation of the construction with $C_i$ isometric to a Euclidean disc and $P$ acting on $C_1$ by an arbitrary rotation.
 
 {\sloppy
