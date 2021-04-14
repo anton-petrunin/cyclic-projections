@@ -44,20 +44,16 @@ That answers the question of Miroslav Bačák \cite[Problem 6.13]{Bac}.
 
 \begin{thm}{Theorem}\label{thm}
 There exists a Hadamard space $X$ and closed convex subsets $C_1,\dots,C_k$ in $X$ such that the composition of the closest-point projections $P\z= P_1\circ \dots \circ P_k$ is not asymptotically regular.
-
-Moreover, we can arrange that $X$ is compact, $k=3$, each $C_i$ is isometric to the unit interval $[0,1]$, 
-and $P$ is an isometry of $C_1$ that swaps its ends.
 \end{thm}
 
 If the sets $C_1,\dots,C_k$ have a common intersection, then such examples are impossible \cite{asymptotic,Bac2,Bac}.
 
-The constructed space contains three convex flat quadrangles $Q_1$, $Q_2$, and $Q_3$ with pairs of opposite sides $(C_1,C_2)$, $(C_2,C_3)$, and $(C_3,C_1)$ such that the union of $Q_1\cup Q_2\cup Q_3$ is a Möbius band.
-
-It is possible to vary the construction and obtain a compact Hadamard space $X$ and a  convex subsets $C_1,C_2,C_3$ all isometric to the unit disc, such that the composition $P=P_1\circ P_2\circ P_3 :C_1\to C_1$  is a rotation of the disc by an arbitrary (especially an irrational) angle.
-Our examples are at least 3-dimensional, but there are slightly more sophisticated 2-dimensional examples as well.
-They can be found among affine buildings of type $\tilde B_2$; see the last remark in the introduction of \cite{balser}. 
-
-On the other hand, in case of two subsets the result of  Heinz Bauschke \cite{Bauschke} admits a generalization:
+We give two examples for $k=3$, but they work for any $k\ge 3$.
+In the first example, the constructed space is a product of two tripods;
+it contains three convex flat quadrangles $Q_1$, $Q_2$, and $Q_3$ with pairs of opposite sides $(C_1,C_2)$, $(C_2,C_3)$, and $(C_3,C_1)$ such that the composition of projections swaps the ends of $C_1$.
+In the second example, the convex subsets $C_1,C_2,C_3$ all isometric to the unit disc, such that the composition $P\:C_1\z\to C_1$  is a rotation of the disc by an arbitrary (in particular an irrational) angle.
+ 
+For $k=2$, the result of  Heinz Bauschke \cite{Bauschke} admits a generalization:
 
 \begin{thm}{Proposition} \label{prop}
 For any two closed convex subsets $C_1,C_2$ of any Hadamard space $X$, for any starting point $x\in X$  the sequence $x_n \z= P^n (x)$ with $P\z=  P_1\circ P_2 :X\to C_1$ is asymptotically  regular.
@@ -71,6 +67,8 @@ Examples given by the real axes $C_1 \subset \R^2$ and the set
 \[C_2  = \{\,(x,y):x>0, y \geq 1+ x^{ -\epsilon}\,\}\]
 reveal that the convergence rate cannot be improved to $O (n^{-\frac 1 2  -\epsilon})$ for any $\epsilon >0$.
 
+\medskip
+
 Further, we assume some familiarity with the geometry of Hadamard spaces \cite{BBI,BH,AKP,AKP_inv,ballmannbook}.
 
 \parbf{Acknowledgments.}
@@ -78,12 +76,85 @@ We thank Miroslav Bačák and Nina Lebedeva for helpful comments and conversatio
 Alexander Lytchak was partially supported by the DFG grant, no. 281071066, TRR 191.
 Anton Petrunin was partially supported by the NSF grant, DMS-2005279.
 
+\section{Product of tripods}
+
+Let us define a \emph{tripod} as a union of three unit segments that share one endpoint with the induced length metric.
+Consider two tripods $S$ and $T$.
+Denote by $a$, $b$, $c$ and $x$, $y$, $z$ the sides of $S$ and $T$ respectively.
+\begin{figure}[h!]
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-20}
+\end{figure}
+
+By the Reshetnyak gluing theorem, $S$ and $T$ are CAT(0).
+Therefore so is the product space $X=S\times T$.
+The following diagram shows 3 isometric copies of $2{\times}2$-square in $X$; they are obtained as the products of two pairs of sides in $S$ and $T$ as labeled:
+\begin{figure}[ht!]
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-30}
+\end{figure}
+
+Consider the segment $C_1$, $C_2$, and $C_3$ shown on the diagram;
+they all have slope $-1$ and project to each other isometrically.
+Note that each projection $P_i$ reverses the shown orientation.
+It follows that the cyclic projection $P\:C_1\to C_1$ swaps the ends of $C_1$.
+In particular, $P$ is \emph{not} asymptotically regular.
+
+
+\section{Three discs}
+
+Fix a small $\epsilon>0$.
+Consider the closed 
+$\epsilon$-neighborhood $A$ of a closed geodesic in the unit sphere~$\mathbb{S}^3$.
+The space $A$ is locally CAT(1) by the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite {ABB-1993}.
+%one can get it as a corollary of the result in \cite{LWcurv}.
+The universal cover $\tilde A$ of $A$ with its induced metric is locally CAT(1) as well. 
+
+Denote by $E$ the preimage of the geodesic in $\tilde A$.
+The isometry group of $\tilde A$ 
+contains the group of translations along $E$ and 
+the rotations that fix $E$.
+Let $g$  be the composition of translation along $E$  of length $2\pi +10\cdot\epsilon$ and a given rotation~$r$.
+The element $g$ generates a discrete subgroup $\Gamma$ in the group of isometries  of $\tilde A$.
+The group $\Gamma$ acts freely on $\tilde A$.
+
+Set $Y =\tilde A/\Gamma$.
+Since $\eps$ is small, every point of $\tilde A$ is moved by any element of $\Gamma$ more than $2\cdot\pi$ away from it.
+Therefore, $Y$ is a compact locally CAT(1) space that does not contain closed geodesics of length less than $2\pi$.
+Hence, by  the generalized Hadamard--Cartan theorem \cite{AKP}, $Y$ is CAT(1).
+By construction, $Y$ is locally isometric to $\mathbb{S}^3$ outside its boundary $B$.
+The projection of $E$ to $Y$ is a closed geodesic $G$ of length $2\pi +10\cdot\epsilon$.
+
+Denote by $X$ the Euclidean cone over $Y$;
+since $Y$ is CAT(1), we get that $X$ is CAT(0); see \cite{AKP}.
+Moreover, $X$ is locally Euclidean outside its \emph{boundary} --- the cone over $B$.
+
+The cone $Z$ over the closed geodesic $G$ is  the Euclidean cone over a circle of length $2\pi +10\cdot\epsilon$. By construction,
+$Z$ is locally convex, hence a convex subset of~$X$.
+Let us consider a geodesic triangle
+$[q_1q_2q_3]$
+in $Z$ that surrounds the origin $o$ of the cone $Z$.
+
+By construction, the sides of triangle $[q_1q_2q_3]$ lie in the flat part of $X$.
+Thus, we can find a small $r>0$ such that the $2\cdot r$-neighborhood $U_1$ of the geodesic $[q_1q_2]$ isometric to a convex subset of the Euclidean space.
+We can assume that $2\cdot r$-neighborhoods $U_2$ of $[q_2q_3]$ and $U_3$ of $[q_3q_1]$ have the same property.
+
+Denote by $C_i$ the disc of radius $r$ centered at $q_i$ and being orthogonal to $Z$.
+By construction, $C_i$ and $C_{i+1}$, for $i=1,2,3\pmod 3$   are contained in~$U_i$.
+Since $Z$ is convex, $C_i$ and $C_{i+1}$ are \emph{parallel} inside $U_i$, thus their convex hull  $Q_i$ is isometric to a cylinder with bases $C_i$ and $C_{i+1}$.
+In particular, the projection $P_i$ is an isometry $C_{i+1}\to C_{i}$.
+
+By construction, the composition $P=P_1\circ P_2\circ P_3\:C_1\to C_1$ rotates $C_1$ by~$r$.
+\qeds
+
 
 \section{Two sets}
 
 
 \begin{wrapfigure}{r}{50mm}
-\vskip-6mm
+\vskip-11mm
 \centering
 \includegraphics{mppics/pic-10}
 \end{wrapfigure}
@@ -121,64 +192,6 @@ By \ref{eq:rsrsrsrs}, $r_n$ is non-increasing.
 Therefore $r_n = o(\tfrac1{\sqrt{n}})$.
 \qeds
 
-\section{Three sets}
-
-\parit{Proof of Theorem \ref{thm}.}
-Fix a small $\epsilon >0$.
-Consider the unit sphere~$\mathbb{S}^2$ and the closed 
-$\epsilon$-neighborhood $A$ of its equator.
-The space $A$ is locally CAT(1) by the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite {ABB-1993}.
-%one can get it as a corollary of the result in \cite{LWcurv}.
-The universal cover $\tilde A$ of $A$ with its induced metric is locally CAT(1) as well. 
-
-Denote by $E$ the preimage of the equator in $\tilde A$  and by $H^{\pm}$ the boundary curves of the stripe $\tilde A$, which are both convex in $\tilde A$.
-The isometry group of $\tilde A$ 
-contains the group of translations  along $E$ (the preimage of rotations of the sphere) and 
-the reflection across $E$ that swaps $H^+$ and $H^-$.
-Let $g$   be the composition of translation along $E$  of length $2\pi +10\cdot\epsilon$  and the reflection $r$.
-The element $g$ generates a discrete group $\Gamma$ isomorphic to $\mathbb Z$ in the group of isometries  of $\tilde A$.
-The group $\Gamma$ acts freely on $\tilde A$ and the quotient space $Y =\tilde A/\Gamma$ is a Möbius band.
-
-Since $\eps$ is small, every point of $\tilde A$ is moved by any element of $\Gamma$ more than $2\cdot\pi$ away from it.
-It implies that the compact locally CAT(1) space $Y$ does not contain closed geodesics of length less than $2\pi$;
-hence, by  the generalized Hadamard--Cartan theorem \cite{AKP}, $Y$ is CAT(1).
-By construction, $Y$ is locally isometric to $\mathbb{S}^2$ outside its boundary curve $B$.
-The projection of $E$ to $Y$ is a closed geodesic $G$ of length $2\pi +10\cdot\epsilon$.
-
-Denote by $X$ the Euclidean cone over $Y$;
-since $Y$ is CAT(1), we get that $X$ is CAT(0); see \cite{AKP}.
-Moreover, $X$ is locally Euclidean outside its \emph{boundary} --- the cone over $B$.
-
-The cone $Z$ over the closed geodesic $G$ is  the Euclidean cone over a circle of length $2\pi +10\cdot\epsilon$. By construction,
-$Z$ is locally convex, hence a convex subset of~$X$.
-Let us consider a geodesic triangle
-$[q_1q_2q_3]$
-in $Z$ that surrounds the origin $o$ of the cone $Z$.
-
-By construction, the triangle $[q_1q_2q_3]$ is contained in the flat part of $X$.
-Thus, we can find a small $r>0$ such that the $r$-neighborhood $U_1$ of the geodesic $[q_1q_2]$ isometric to a convex subset of the Euclidean space.
-We can assume that $r$-neighborhoods $U_2$ of $[q_2q_3]$ and $U_3$ of $[q_3q_1]$ have the same property.
-
-Denote by $C_i$ the segment of length $r$ centered at $q_i$ and being orthogonal to $Z$ at $q_i$.
-By construction, $C_i$ and $C_{i+1}$, for $i=1,2,3\pmod 3$   are contained in~$U_i$.
-Since $Z$ is convex, $C_i$ and $C_{i+1}$ are \emph{parallel} inside $U_i$, thus their convex hull  $Q_i$ is isometric to a rectangle with two opposite sides given by $C_i$ and $C_{i+1}$.
-In particular, the metric projection from $C_{i+1}$ to $C_{i}$ is an isometry.
-
-Note that the central projection $Q_1\cup Q_2\cup Q_3\to Y$ is an embedding.
-It follows that the union $Q_1\cup Q_2\cup Q_3$ is homeomorphic to the Möbius band.
-Thus, \emph{going around} we change the orientation of $C_1$.
-It means, that the composition $P:C_1\to C_1$ (which is an isometry by construction) changes the orientation of the 
-segment $C_1$.
-
-The constructed space $X$ is not compact, but  the convex subsets $C_1,C_2,C_3$ are contained in a closed ball.
-We finish the construction replacing $X$ with any such ball.
-\qeds
-
-The same construction works in higher dimensions.
-Namely, instead of $A$, we may choose a tubular neighborhood of a closed geodesic in $\mathbb{S}^4$;
-by \cite{ABB-1993}, the space $A$ is CAT(1).
-Instead of $g$, we may take a glide rotation of $\tilde A$.
-That gives a variation of the construction with $C_i$ isometric to a Euclidean disc and $P$ acting on $C_1$ by an arbitrary rotation.
 
 {\sloppy
 \printbibliography[heading=bibintoc]

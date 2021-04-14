@@ -70,5 +70,86 @@ label.lft(btex $a_2$ etex, .5[z3,z4]+(0,-2));
 label.urt(btex $b_1$ etex, .5[z3,z2]);
 endfig;
 
+beginfig(20) 
+save u,p;
+u:=1.4cm;
+path p[];
+
+z.o=origin;
+z.a=(0,1)*u;
+z.b=z.a rotated 120;
+z.c=z.a rotated -120;
+z.shift= (3,0)*u;
+
+draw z.a--z.o--z.b pensemibold;
+draw z.o--z.c pensemibold;
+draw z.a+z.shift--z.o+z.shift--z.b+z.shift pensemibold;
+draw z.o+z.shift--z.c+z.shift pensemibold;
+
+%Dot z.a,z.o,z.b,z.c,z.a+z.shift,z.o+z.shift,z.b+z.shift,z.c+z.shift;
+
+label.bot(btex $S$ etex, z.o+(0,-5));
+label.bot(btex $T$ etex, z.o+z.shift+(0,-5));
+
+label.top(btex $a$ etex, z.a);
+label.lft(btex $b$ etex, z.b);
+label.rt(btex $c$ etex, z.c);
+
+label.top(btex $x$ etex, z.a+z.shift);
+label.lft(btex $y$ etex, z.b+z.shift);
+label.rt(btex $z$ etex, z.c+z.shift);
+endfig;
+
+beginfig(30) 
+save u,p;
+u:=1.4cm;
+path p[];
+
+
+z.o=origin;
+z.a=(-1,0)*u;
+z.b=-z.a;
+z.x=z.a rotated 90;
+z.y=-z.x;
+z.shift= (3,0)*u;
+
+picture pic;
+
+pic:= image(
+draw z.a--z.b pensemibold;
+draw z.x--z.y pensemibold;
+draw z.a+z.x--z.b+z.x--z.b+z.y--z.a+z.y--cycle dashed evenly;
+drawarrow .3[z.a,z.x]--.7[z.a,z.x] pensemibold;
+drawarrow .3[z.b,z.y]--.7[z.b,z.y] pensemibold;
+);
+
+draw pic;
+draw pic shifted z.shift;
+draw pic shifted (2*z.shift);
+
+label.lft(btex $a$ etex, z.a);
+label.lft(btex $b$ etex, z.a+z.shift);
+label.lft(btex $b$ etex, z.a+2*z.shift);
+
+label.rt(btex $c$ etex, z.b);
+label.rt(btex $c$ etex, z.b+z.shift);
+label.rt(btex $a$ etex, z.b+2*z.shift);
+
+label.bot(btex $x$ etex, z.x);
+label.bot(btex $y$ etex, z.x+z.shift);
+label.bot(btex $y$ etex, z.x+2*z.shift);
+
+label.top(btex $z$ etex, z.y);
+label.top(btex $z$ etex, z.y+z.shift);
+label.top(btex $x$ etex, z.y+2*z.shift);
+
+label.llft(btex $C_1$ etex, .5[z.a,z.x]);
+label.llft(btex $C_2$ etex, .5[z.a,z.x]+z.shift);
+label.llft(btex $C_2$ etex, .5[z.a,z.x]+2*z.shift);
+
+label.urt(btex $C_3$ etex, .5[z.b,z.y]);
+label.urt(btex $C_3$ etex, .5[z.b,z.y]+z.shift);
+label.urt(btex $C_1$ etex, .5[z.b,z.y]+2*z.shift);
+endfig;
 
 end
