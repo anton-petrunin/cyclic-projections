@@ -48,12 +48,14 @@ There exists a Hadamard space $X$ and closed convex subsets $C_1,\dots,C_k$ in $
 
 If the sets $C_1,\dots,C_k$ have a common intersection, then such examples are impossible \cite{asymptotic,Bac2,Bac}.
 
-We give two explicit examples for $k=3$, but the same constructions work for any $k\ge 3$.
+We provide two explicit examples proving the theorem  for  $k=3$.
+Setting $C_3=C_4=\dots$ defines examples for any $k\geq 3$.
 
 In the first example (Section \ref{sec:tripods}), the constructed space is a product of two tripods;
 it contains three convex flat quadrangles $Q_1$, $Q_2$, and $Q_3$ with pairs of opposite sides $(C_1,C_2)$, $(C_2,C_3)$, and $(C_3,C_1)$ such that the composition of projections swaps the ends of $C_1$.
 
-In the second example (Section \ref{sec:discs}), the convex subsets $C_1,C_2,C_3$ are isometric to the unit disc, and the composition $P\:C_1\z\to C_1$ rotates the disc by an arbitrary (in particular an irrational) angle.
+In the second example (Section \ref{sec:discs}), the convex subsets $C_1,C_2,C_3$ are isometric to the unit disc, and the composition $P\:C_1\z\to C_1$ rotates the disc by an arbitrary angle.
+If the angle is chosen irrational, then no power of $P$ is asymptotically regular.
  
 For $k=2$, the result of Heinz Bauschke \cite{Bauschke} admits a generalization:
 
@@ -62,7 +64,7 @@ Let $C_1,C_2$ be two closed convex subsets of a Hadamard space $X$.
 Then the composition $P\z=  P_1\circ P_2$ is asymptotically  regular.
 
 Moreover, $|x_n-x_{n+1}| =o (\frac  {1} {\sqrt n})$ for any starting point $x\in X$ and the sequence $x_n \z= P^n (x)$.
-(We denote by $|x_n-x_{n+1}|$ the distance between the points $x_n$ and $x_{n+1}$ in $X$.)
+We denote by $|x_n-x_{n+1}|$ the distance between the points $x_n$ and $x_{n+1}$ in $X$.
 \end{thm}
 
 Examples given by the real axes $C_1 \subset \R^2$ and the set
@@ -90,7 +92,7 @@ Denote by $a$, $b$, $c$ and $x$, $y$, $z$ the sides of $S$ and $T$ respectively.
 \end{figure}
 
 By the Reshetnyak gluing theorem, $S$ and $T$ are CAT(0).
-Therefore so is the product space $X=S\times T$.
+Therefore, so is the product space $X=S\times T$.
 The following diagram shows 3 isometric copies of $2{\times}2$-square in $X$; they are obtained as the products of two pairs of sides in $S$ and $T$ as labeled:
 \begin{figure}[ht!]
 \vskip0mm
@@ -107,7 +109,7 @@ In particular, $P$ is \emph{not} asymptotically regular.
 
 \section{Three discs}\label{sec:discs}
 
-Fix small $\epsilon>0$.
+Fix an angle $\alpha$ and a small $\epsilon>0$.
 Consider the closed 
 $\epsilon$-neighborhood $A$ of a closed geodesic in the unit sphere~$\mathbb{S}^3$.
 By the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite {ABB-1993}, the space $A$ is locally CAT(1).
@@ -117,7 +119,7 @@ Denote by $E$ the preimage of the geodesic in $\tilde A$.
 The isometry group of $\tilde A$ 
 contains the group of translations along $E$ and 
 the rotations that fix $E$.
-Let $T$  be the composition of translation along $E$  of length $2\pi +10\cdot\epsilon$ and a given rotation~$R$.
+Let $T$  be the composition of translation along $E$  of length $2\pi +10\cdot\epsilon$ and the rotation~$R$ by angle $\alpha$.
 The element $T$ generates a discrete subgroup $\Gamma$ in the group of isometries  of $\tilde A$ that acts freely.
 
 Set $Y =\tilde A/\Gamma$.
@@ -186,10 +188,10 @@ By CAT(0) comparison
 % $\tilde\measuredangle(x_{n+1}\,{}^{x_n}_{y_n})\ge \tfrac\pi2$.
 %it implies that 
 \[r_n^2  \leq a_n^2-b_n^2.\]
-Therefore \ref{eq:abababa} implies that 
+Therefore, \ref{eq:abababa} implies that 
 \[\sum_{n} r_n ^2\le a_1^2.\]
 By \ref{eq:rsrsrsrs}, $r_n$ is non-increasing.
-Therefore $r_n = o(\tfrac1{\sqrt{n}})$.
+Therefore, $r_n = o(\tfrac1{\sqrt{n}})$.
 \qeds
 
 
