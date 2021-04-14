@@ -42,6 +42,8 @@ In this note we show that this statement does not hold in general Hadamard space
 admit generalizations and, thus, depend only on the convexity properties of the distance functions and not on the linear structure. 
 That answers the question of Miroslav Bačák \cite[Problem 6.13]{Bac}.
 
+We will denote by $|x-y|$ the distance between points $x$ and $y$ in any metric space, even without linear structure.
+
 \begin{thm}{Theorem}\label{thm}
 There exists a Hadamard space $X$ and closed convex subsets $C_1,\dots,C_k$ in $X$ such that the composition of the closest-point projections $P\z= P_1\circ \dots \circ P_k$ is not asymptotically regular.
 \end{thm}
@@ -63,8 +65,7 @@ For $k=2$, the result of Heinz Bauschke \cite{Bauschke} admits a generalization:
 Let $C_1,C_2$ be two closed convex subsets of a Hadamard space $X$.
 Then the composition $P\z=  P_1\circ P_2$ is asymptotically  regular.
 
-Moreover, $|x_n-x_{n+1}| =o (\frac  {1} {\sqrt n})$ for any starting point $x\in X$ and the sequence $x_n \z= P^n (x)$.
-We denote by $|x_n-x_{n+1}|$ the distance between the points $x_n$ and $x_{n+1}$ in $X$.
+Moreover, $|x_n-x_{n+1}| =o (\frac  {1} {\sqrt n})$ for any  $x\in X$ and $x_n \z= P^n (x)$.
 \end{thm}
 
 Examples given by the real axes $C_1 \subset \R^2$ and the set
@@ -119,7 +120,7 @@ Denote by $E$ the preimage of the geodesic in $\tilde A$.
 The isometry group of $\tilde A$ 
 contains the group of translations along $E$ and 
 the rotations that fix $E$.
-Let $T$  be the composition of translation along $E$  of length $2\pi +10\cdot\epsilon$ and the rotation~$R$ by angle $\alpha$.
+Let $T$  be the composition of translation along $E$  of length $2\pi +10\cdot\epsilon$ and the rotation by angle $\alpha$.
 The element $T$ generates a discrete subgroup $\Gamma$ in the group of isometries  of $\tilde A$ that acts freely.
 
 Set $Y =\tilde A/\Gamma$.
@@ -148,8 +149,8 @@ By construction, $C_i$ and $C_{i+1}$, for $i=1,2,3\pmod 3$   are contained in~$U
 Since $Z$ is convex, $C_i$ and $C_{i+1}$ are \emph{parallel} inside $U_i$, thus their convex hull  $Q_i$ is isometric to a right cylinder with bases $C_i$ and $C_{i+1}$.
 In particular, the projection $P_i$ defines an isometry $C_{i+1}\to C_{i}$.
 
-By construction, the composition $P=P_1\circ P_2\circ P_3\:C_1\to C_1$ rotates $C_1$ by~$R$.
-If $R$ is irrational rotation, then $P$, as well as all its powers, are \emph{not} asymptotically regular.
+By construction, the composition $P=P_1\circ P_2\circ P_3\:C_1\to C_1$ rotates $C_1$ by angle $\alpha$.
+If $\tfrac\alpha\pi$ is irrational, then $P$, as well as all its powers, are \emph{not} asymptotically regular.
 
 
 \section{Two sets}
