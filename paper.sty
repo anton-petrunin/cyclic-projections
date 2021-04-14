@@ -32,7 +32,7 @@ isbn=false]{biblatex}
 \AtEveryBibitem{\clearlist{language}}
 \AtEveryBibitem{\clearlist{note}}
 \renewbibmacro{in:}{}
-\renewcommand*{\bibfont}{\scriptsize}
+\renewcommand*{\bibfont}{\small}
 \addbibresource{library.bib}
 
 \usepackage{hyperref}
@@ -40,7 +40,10 @@ isbn=false]{biblatex}
 \hypersetup{colorlinks=true,citecolor=black,linkcolor=black,anchorcolor=black,filecolor=black,menucolor=black,urlcolor=black
 }
 
-
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+\DeclareFieldFormat{pages}{#1}
+%removes p. in the cites
 
 \hyphenation{Kapo-vitch}
 
