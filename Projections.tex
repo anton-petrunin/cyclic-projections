@@ -51,7 +51,7 @@ There exists a Hadamard space $X$ and closed convex subsets $C_1,\dots,C_k$ in $
 If the sets $C_1,\dots,C_k$ have a common intersection, then such examples are impossible \cite{asymptotic,Bac2,Bac}.
 
 We provide two explicit examples proving the theorem  for  $k=3$.
-Setting $C_3=C_4=\dots$ defines examples for any $k\geq 3$.
+Setting $C_3=\dots=C_k$ defines examples for any $k\geq 3$.
 
 In the first example (Section \ref{sec:tripods}), the constructed space is a product of two tripods;
 it contains three convex flat quadrangles $Q_1$, $Q_2$, and $Q_3$ with pairs of opposite sides $(C_1,C_2)$, $(C_2,C_3)$, and $(C_3,C_1)$ such that the composition of projections swaps the ends of $C_1$.
@@ -144,7 +144,7 @@ By construction, the sides of triangle $[q_1q_2q_3]$ lie in the flat part of $X$
 Thus, we can find a small $r>0$ such that the $2\cdot r$-neighborhood $U_1$ of the geodesic $[q_1q_2]$ isometric to a convex subset of the Euclidean space.
 We can assume that $2\cdot r$-neighborhoods $U_2$ of $[q_2q_3]$ and $U_3$ of $[q_3q_1]$ have the same property.
 
-Denote by $C_i$ the disc of radius $r$ centered at $q_i$ and being orthogonal to $Z$.
+Denote by $C_i$ the disc of radius $r$ centered at $q_i$ and being orthogonal to~$Z$.
 By construction, $C_i$ and $C_{i+1}$, for $i=1,2,3\pmod 3$   are contained in~$U_i$.
 Since $Z$ is convex, $C_i$ and $C_{i+1}$ are \emph{parallel} inside $U_i$, thus their convex hull  $Q_i$ is isometric to a right cylinder with bases $C_i$ and $C_{i+1}$.
 In particular, the projection $P_i$ defines an isometry $C_{i+1}\to C_{i}$.
@@ -185,9 +185,7 @@ Note that
 \eqlbl{eq:abababa}\]
 
 Since $C_1$ is convex and $x_{n+1}\in C_1$ lies at the minimal distance from $y_n$, we have $\measuredangle[x_{n+1}\,{}^{x_n}_{y_n}]\ge \tfrac\pi2$. 
-By CAT(0) comparison
-% $\tilde\measuredangle(x_{n+1}\,{}^{x_n}_{y_n})\ge \tfrac\pi2$.
-%it implies that 
+By CAT(0) comparison,
 \[r_n^2  \leq a_n^2-b_n^2.\]
 Therefore, \ref{eq:abababa} implies that 
 \[\sum_{n} r_n ^2\le a_1^2.\]
