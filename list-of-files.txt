@@ -1,0 +1,6 @@
+Projections.tex
+Projections.bbl
+mppics/pic-10.mps
+mppics/pic-20.mps
+mppics/pic-30.mps
+paper.sty
