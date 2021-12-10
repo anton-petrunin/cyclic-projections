@@ -101,8 +101,9 @@ label.rt(btex $z$ etex, z.c+z.shift);
 endfig;
 
 beginfig(30) 
-save u,p;
+save u,p,k;
 u:=1.4cm;
+k:=2**(-.5);
 path p[];
 
 
@@ -119,8 +120,8 @@ pic:= image(
 draw z.a--z.b pensemibold;
 draw z.x--z.y pensemibold;
 draw z.a+z.x--z.b+z.x--z.b+z.y--z.a+z.y--cycle dashed evenly;
-drawarrow .3[z.a,z.x]--.7[z.a,z.x] pensemibold;
-drawarrow .3[z.b,z.y]--.7[z.b,z.y] pensemibold;
+drawarrow (.5*(1-k))[z.a,z.x]--(.5*(1+k))[z.a,z.x] pensemibold;
+drawarrow (.5*(1-k))[z.b,z.y]--(.5*(1+k))[z.b,z.y] pensemibold;
 );
 
 draw pic;
