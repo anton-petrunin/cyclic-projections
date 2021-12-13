@@ -31,7 +31,7 @@ We  prove that iterating projections onto convex subsets of Hadamard spaces can 
 
 The method of cyclic  projections is a classical algorithm seeking  an intersection point of a finite family  $C_1,\dots, C_k$ of  closed convex subsets in a Hilbert  space~$X$.
 Denote by $P_i$ the closest-point projection $X\to C_i$; it sends a point $x\in X$ to the (necessarily unique) point $P_i(x)$ in $C_i$ that minimize the distance to~$x$.
-Given a point $x\in X$ consider the sequence $x_n=P^n(x)$, where
+Given a point $x_0\in X$ consider the sequence $x_n=P^n(x_0)$, where
 $P$ is the  cyclic composition of projections $P= P_1\circ \dots \circ P_k$.  The method of cyclic projections analyzes the sequence $(x_n)$, tries to find a limit point $x_{\infty}$, to show $x_{\infty} \in C_1\cap\z\dots\cap C_k$, and to understand the  rate of convergence.
 
 Let us list few results in the area.
@@ -40,7 +40,7 @@ However, this convergence does not need to be strong \cite{hundal}.
 \emph{If, in addition,  $C_i$ are  linear subspaces, then the convergence is strong} \cite{vonneumann,halperin}.
 If the intersection  $C_1\cap \dots\cap C_k$ is not assumed to be non-empty,  the analysis of the sequence $(x_n)$ is more complicated.
 However, in \cite{bauschke} it has been established that the cyclic product $P= P_1\circ \dots \circ P_k$ is \emph{asymptotically regular};
-by definition, this means, that for any starting point  $x\in X$, we have  $|x_n-x_{n+1}|\to 0$ as $n\to \infty$.
+by definition, this means, that for any starting point  $x_0\in X$, we have  $|x_n-x_{n+1}|\to 0$ as $n\to \infty$.
 The rates of convergence, respectively, the rates of asymptotic regularity have been investigated in several works, see, for instance \cite{bauschke-borwein-lewis, Kohlenbach}.
 For further reference, see \cite{bauschke-borwein-lewis, deutsch, Bac, Bac2}
 
@@ -77,18 +77,19 @@ There exists a Hadamard space $X$ and compact convex subsets $C_1,\dots,C_k$ in 
 We provide an explicit example with $X$ being a product of two trees, proving the theorem for $k=3$.
 Setting $C_3=\dots=C_k$ defines examples for any $k\geq 3$.
 
-In this example, all subsets $C_i$ are isometric to the unit interval, the projections $P_i$ maps all of these segments isometrically onto $C_1$ and the composition $P\z=P_1\circ P_2\circ P_3$ is maps $C_1$ to itself isometrically but exchanges the endpoints.
+In this example, all subsets $C_i$ are isometric to the unit interval, the projections $P_i$ maps all of these segments isometrically onto $C_i$ and the composition $P\z=P_1\circ P_2\circ P_3$ maps $C_1$ to itself isometrically but exchanges the endpoints
+of this interval.
 A stronger version of the theorem is proved in the appendix;
 it requires a somewhat deeper understanding of the geometry of Hadamard spaces.
 
-On the other hand, for two convex subsets, thus in the case $k=2$,  the result of Heinz Bauschke \cite{bauschke} admits a generalization;  in this case, the algorithm is simple enough to be controlled explicitly, even providing an optimal rate of asymptotic regularity.
+On the other hand, for two convex subsets, thus in the case $k=2$,  the result of Heinz Bauschke \cite{bauschke}  does admit a generalization;  in this case, the algorithm is simple enough to be controlled explicitly, even providing an optimal rate of asymptotic regularity.
 
 
 \begin{thm}{Proposition} \label{prop}
 Let $C_1,C_2$ be two closed convex subsets of a Hadamard space $X$.
 Then the composition $P\z=  P_1\circ P_2$ is asymptotically  regular.
 
-Moreover, $|x_n-x_{n+1}| =o (\frac  {1} {\sqrt n})$ for any  $x\in X$ and $x_n \z= P^n (x)$.
+Moreover, $|x_n-x_{n+1}| =o (\frac  {1} {\sqrt n})$ for any  $x_0\in X$ and $x_n \z= P^n (x_0)$.
 \end{thm}
 
 Here and further we denote by $|x-y|$ the distance between points $x$ and $y$ in any metric space, even without linear structure.
@@ -194,16 +195,19 @@ If  $\alpha$ is irrational, then no power of $P$ is asymptotically regular.
 
 Fix an angle $\alpha$ and a small $\epsilon>0$.
 Consider the closed 
-$\epsilon$-neighborhood $A$ of a closed geodesic in the unit sphere~$\mathbb{S}^3$.
+$\epsilon$-neighborhood $A$ of a closed geodesic $\gamma$ in the unit sphere~$\mathbb{S}^3$.
 By the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite {ABB-1993}, $A$ is locally CAT(1).
 The universal cover $\tilde A$ of $A$ with its induced metric is locally CAT(1) as well. 
+Since $\tilde A$ doe not contain closed geodesics, it is CAT(1), by  the generalized Hadamard--Cartan theorem, \cite{AKP} \footnote{Maybe here and below better cite Bowditch or Ballmann. In [AKP] it is not easy to find the statement.}
 
-Denote by $E$ the inverse image of the geodesic in $\tilde A$.
+
+
+Denote by $E$ the inverse image of $\gamma$ in $\tilde A$.
 The isometry group of $\tilde A$ 
 contains the group of translations along $E$ and 
 the rotations that fix $E$.
 Let $T$  be the composition of translation along $E$  of length $2\pi +10\cdot\epsilon$ and the rotation by angle $\alpha$.
-The element $T$ generates a discrete subgroup $\Gamma$ in the group of isometries  of $\tilde A$ that acts freely.
+The element $T$ generates a discrete subgroup $\Gamma$ in the group of isometries  of $\tilde A$ that acts freely and discretely on $\tilde A$.
 
 Set $Y =\tilde A/\Gamma$.
 Since $\eps$ is small, any nontrivial element of $\Gamma$ moves
@@ -224,12 +228,12 @@ $[q_1q_2q_3]$
 in $Z$ that surrounds the origin $o$ of the cone $Z$.
 
 By construction, the sides of triangle $[q_1q_2q_3]$ lie in the flat part of $X$.
-Thus, we can find a small $r>0$ such that the $2\cdot r$-neighborhood $U_1$ of the geodesic $[q_1q_2]$ isometric to a convex subset of the Euclidean space.
+Thus, we can find a small $r>0$ such that the $2\cdot r$-neighborhood $U_1$ of the geodesic $[q_1q_2]$ is isometric to a convex subset of the Euclidean space.
 We can assume that $2\cdot r$-neighborhoods $U_2$ of $[q_2q_3]$ and $U_3$ of $[q_3q_1]$ have the same property.
 
 Denote by $C_i$ the disc of radius $r$ centered at $q_i$ and being orthogonal to~$Z$.
 By construction, $C_i$ and $C_{i+1}$, for $i=1,2,3\pmod 3$   are contained in~$U_i$.
-Since $Z$ is convex, $C_i$ and $C_{i+1}$ are \emph{parallel} inside $U_i$, thus their convex hull  $Q_i$ is isometric to a right cylinder with bases $C_i$ and $C_{i+1}$.
+Since $Z$ is convex, $C_i$ and $C_{i+1}$ are \emph{parallel} inside $U_i$, thus their convex hull  $Q_i$ is isometric to the  cylinder $C_i \times [q_i,q_{i+1}]$ with bottom and top $C_i$ and $C_{i+1}$.
 In particular, the projection $P_i$ defines an isometry $C_{i+1}\to C_{i}$.
 
 By construction, the composition $P=P_1\circ P_2\circ P_3\:C_1\to C_1$ rotates $C_1$ by angle $\alpha$.
