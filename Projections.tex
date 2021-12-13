@@ -31,7 +31,7 @@ We  prove that iterating projections onto convex subsets of Hadamard spaces can 
 
 The method of cyclic  projections is a classical algorithm seeking  an intersection point of a finite family  $C_1,\dots, C_k$ of  closed convex subsets in a Hilbert  space~$X$.
 Denote by $P_i$ the closest-point projection $X\to C_i$; it sends a point $x\in X$ to the (necessarily unique) point $P_i(x)$ in $C_i$ that minimize the distance to~$x$.
-Given a point $x_0\in X$ consider the sequence $x_n=P^n(x_0)$, where
+Given a point $x\in X$ consider the sequence $x_n=P^n(x)$, where
 $P$ is the  cyclic composition of projections $P= P_1\circ \dots \circ P_k$.  The method of cyclic projections analyzes the sequence $(x_n)$, tries to find a limit point $x_{\infty}$, to show $x_{\infty} \in C_1\cap\z\dots\cap C_k$, and to understand the  rate of convergence.
 
 Let us list few results in the area.
@@ -40,7 +40,7 @@ However, this convergence does not need to be strong \cite{hundal}.
 \emph{If, in addition,  $C_i$ are  linear subspaces, then the convergence is strong} \cite{vonneumann,halperin}.
 If the intersection  $C_1\cap \dots\cap C_k$ is not assumed to be non-empty,  the analysis of the sequence $(x_n)$ is more complicated.
 However, in \cite{bauschke} it has been established that the cyclic product $P= P_1\circ \dots \circ P_k$ is \emph{asymptotically regular};
-by definition, this means, that for any starting point  $x_0\in X$, we have  $|x_n-x_{n+1}|\to 0$ as $n\to \infty$.
+by definition, this means, that for any starting point  $x\in X$, we have  $|x_n-x_{n+1}|\to 0$ as $n\to \infty$.
 The rates of convergence, respectively, the rates of asymptotic regularity have been investigated in several works, see, for instance \cite{bauschke-borwein-lewis, Kohlenbach}.
 For further reference, see \cite{bauschke-borwein-lewis, deutsch, Bac, Bac2}
 
@@ -89,7 +89,7 @@ On the other hand, for two convex subsets, thus in the case $k=2$,  the result o
 Let $C_1,C_2$ be two closed convex subsets of a Hadamard space $X$.
 Then the composition $P\z=  P_1\circ P_2$ is asymptotically  regular.
 
-Moreover, $|x_n-x_{n+1}| =o (\frac  {1} {\sqrt n})$ for any  $x_0\in X$ and $x_n \z= P^n (x_0)$.
+Moreover, $|x_n-x_{n+1}| =o (\frac  {1} {\sqrt n})$ for any  $x\in X$ and $x_n \z= P^n (x)$.
 \end{thm}
 
 Here and further we denote by $|x-y|$ the distance between points $x$ and $y$ in any metric space, even without linear structure.
@@ -114,7 +114,7 @@ Our space $X$ is a product of two trees, thus of two Hadamard spaces. Hence $X$ 
 
 
 
-Denote by $a$, $b$, $c$ and $x$, $y$, $z$ the sides of $S$ and $T$ respectively.
+Denote by $a$, $b$, $c$ and $u$, $v$, $w$ the sides of $S$ and $T$ respectively.
 \begin{figure}[h!]
 \vskip0mm
 \centering
@@ -140,15 +140,16 @@ Finally, setting $C_3=\dots=C_k$ defines examples for any $k\geq 3$.\qeds
 \section{Two sets}
 
 \mbox{\parit{Proof of \ref{prop}.}}
-By definition,  $x_n \in C_1$ for all~$n$.
-Set $y_n= P_2 (x_n)$, so $y_n$ is the closest-point projection of $x_n$ to $C_2$.
+By definition, $x_n \in C_1$ for all~$n$.
+Set $y_{n+1}= P_2\circ  P^n(x)$, 
+so $y_1=P_2(x)$, $x_1=P_1(y_1)$, $y_2=P_2(x_1)$, and so on.
 Further set 
 \begin{align*}
 r_n&:=|x_n-x_{n+1}|,\\
 s_n&:=|y_n-y_{n+1}|.
 \end{align*}
 Since the closest-point projection is nonexpanding, we get
-\[r_1 \geq s_1 \geq r_2\geq s_2\geq\dots
+\[s_1 \geq r_1 \geq s_2\geq r_2\geq \dots
 \eqlbl{eq:rsrsrsrs}
 \]
 
@@ -160,18 +161,18 @@ Since the closest-point projection is nonexpanding, we get
 
 Set
 \begin{align*}
-a_n &\df |x_n-y_n|= \dist_{C_2}x_n,\\
- b_n &\df |y_n-x_{n+1}|= \dist_{C_1}y_n.
+a_n &\df |x_n-y_n|= \dist_{C_1}y_n,\\
+ b_n &\df |y_{n+1}-x_n|= \dist_{C_2}x_n.
 \end{align*}
 Note that
 \[a_1 \geq b_1 \geq a_2 \geq b_2 \geq \dots
 \eqlbl{eq:abababa}\]
 
-Since $C_1$ is convex and $x_{n+1}\in C_1$ lies at the minimal distance from $y_n$, we have $\measuredangle[x_{n+1}\,{}^{x_n}_{y_n}]\ge \tfrac\pi2$. 
+Since $C_1$ is convex and $x_{n}\in C_1$ lies at the minimal distance from $y_n$, we have $\measuredangle[x_{n}\,{}^{x_{n-1}}_{y_n}]\ge \tfrac\pi2$. 
 Since $X$ is a Hadamard space,
-\[r_n^2  \leq a_n^2-b_n^2.\]
+\[r_n^2  \leq b_{n-1}^2 - a_n^2.\]
 Therefore, \ref{eq:abababa} implies that 
-\[\sum_{n} r_n ^2\le a_1^2.\]
+\[\sum_{n} r_n ^2\le b_1^2.\]
 By \ref{eq:rsrsrsrs}, $r_n$ is non-increasing.
 Therefore, $r_n = o(\tfrac1{\sqrt{n}})$.
 \qeds
@@ -198,9 +199,7 @@ Consider the closed
 $\epsilon$-neighborhood $A$ of a closed geodesic $\gamma$ in the unit sphere~$\mathbb{S}^3$.
 By the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite {ABB-1993}, $A$ is locally CAT(1).
 The universal cover $\tilde A$ of $A$ with its induced metric is locally CAT(1) as well. 
-Since $\tilde A$ doe not contain closed geodesics, it is CAT(1), by  the generalized Hadamard--Cartan theorem, \cite{AKP} \footnote{Maybe here and below better cite Bowditch or Ballmann. In [AKP] it is not easy to find the statement.}
-
-
+Since $\tilde A$ doe not contain closed geodesics, it is CAT(1), by  the generalized Hadamard--Cartan theorem, \cite{AKP,bowditch}.
 
 Denote by $E$ the inverse image of $\gamma$ in $\tilde A$.
 The isometry group of $\tilde A$ 

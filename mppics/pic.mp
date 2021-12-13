@@ -55,16 +55,16 @@ clip currentpicture to p0;
 
 dOt z0,z1,z2,z3,z4;
 
-whitelabel(btex $C_1$ etex, z.ul+(15,-15));
-whitelabel(btex $C_2$ etex, z.ll+(15,15));
+whitelabel(btex $C_2$ etex, z.ul+(15,-15));
+whitelabel(btex $C_1$ etex, z.ll+(15,15));
 
 label.rt(btex $x$ etex, z0);
-whitelabel.ulft(btex $x_1$ etex, z1);
-whitelabel.llft(btex $y_1$ etex, z2);
-whitelabel.ulft(btex $x_2$ etex, z3);
-whitelabel.llft(btex $y_2$ etex, z4);
-whitelabel.ulft(btex $r_1$ etex, .5[z1,z3]);
-whitelabel.llft(btex $s_1$ etex, .5[z2,z4]);
+whitelabel.ulft(btex $y_1$ etex, z1);
+whitelabel.llft(btex $x_1$ etex, z2);
+whitelabel.ulft(btex $y_2$ etex, z3);
+whitelabel.llft(btex $x_2$ etex, z4);
+whitelabel.ulft(btex $s_1$ etex, .5[z1,z3]);
+whitelabel.llft(btex $r_1$ etex, .5[z2,z4]);
 label.lrt(btex $a_1$ etex, .5[z1,z2]);
 label.lft(btex $a_2$ etex, .5[z3,z4]+(0,-2));
 label.urt(btex $b_1$ etex, .5[z3,z2]);
@@ -95,9 +95,9 @@ label.top(btex $a$ etex, z.a);
 label.lft(btex $b$ etex, z.b);
 label.rt(btex $c$ etex, z.c);
 
-label.top(btex $x$ etex, z.a+z.shift);
-label.lft(btex $y$ etex, z.b+z.shift);
-label.rt(btex $z$ etex, z.c+z.shift);
+label.top(btex $u$ etex, z.a+z.shift);
+label.lft(btex $v$ etex, z.b+z.shift);
+label.rt(btex $w$ etex, z.c+z.shift);
 endfig;
 
 beginfig(30) 
@@ -136,13 +136,13 @@ label.rt(btex $c$ etex, z.b);
 label.rt(btex $c$ etex, z.b+z.shift);
 label.rt(btex $a$ etex, z.b+2*z.shift);
 
-label.bot(btex $x$ etex, z.x);
-label.bot(btex $y$ etex, z.x+z.shift);
-label.bot(btex $y$ etex, z.x+2*z.shift);
+label.bot(btex $u$ etex, z.x);
+label.bot(btex $v$ etex, z.x+z.shift);
+label.bot(btex $v$ etex, z.x+2*z.shift);
 
-label.top(btex $z$ etex, z.y);
-label.top(btex $z$ etex, z.y+z.shift);
-label.top(btex $x$ etex, z.y+2*z.shift);
+label.top(btex $w$ etex, z.y);
+label.top(btex $w$ etex, z.y+z.shift);
+label.top(btex $u$ etex, z.y+2*z.shift);
 
 label.llft(btex $C_1$ etex, .5[z.a,z.x]);
 label.llft(btex $C_2$ etex, .5[z.a,z.x]+z.shift);
