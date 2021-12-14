@@ -62,8 +62,8 @@ For instance, \emph{if the subsets $C_i$ have a non-empty intersection, then
 the cyclic projections $x_n=P^n (x)$ converge \emph{weakly} to a point $x_{\infty} \in C_1\cap \dots\cap C_k$}
 \cite{asymptotic, Bac2}.
 (The weak topology on Hadamard spaces is discussed in \cite{Bac, bachak-book, lytchak-petrunin}.)
-Moreover, if the convex subsets $C_i$ have a non-empty intersection, then the cyclic projection $P$ is asymptotically regular;
-the rate of convergence in this setting had been studied in \cite{KLN}.
+Moreover, if the  subsets $C_i$ have a non-empty intersection, then the cyclic product of projections $P$ is asymptotically regular;
+the rate of convergence in this setting has been studied in \cite{KLN}.
 
 Therefore it is somewhat surprising, that the fundamental result of Heinz Bauschke [8] for (possibly) non-intersecting convex subsets $C_i$ does not admit  a generalization to the
  setting of Hadamard spaces.  The following main result of this paper provides a negative answer to  the question of Miroslav Bačák \cite[Problem 6.13]{Bac}.
@@ -77,12 +77,15 @@ There exists a Hadamard space $X$ and compact convex subsets $C_1,\dots,C_k$ in 
 We provide an explicit example with $X$ being a product of two trees, proving the theorem for $k=3$.
 Setting $C_3=\dots=C_k$ defines examples for any $k\geq 3$.
 
-In this example, all subsets $C_i$ are isometric to the unit interval, the projections $P_i$ maps all of these segments isometrically onto $C_i$ and the composition $P\z=P_1\circ P_2\circ P_3$ maps $C_1$ to itself isometrically but exchanges the endpoints
+In this example, all subsets $C_i$ are isometric to the unit interval, the projections $P_i$ map all of these segments isometrically onto $C_i$ and the composition $P\z=P_1\circ P_2\circ P_3$ maps $C_1$ to itself isometrically but exchanges the endpoints
 of this interval.
 A stronger version of the theorem is proved in the appendix;
 it requires a somewhat deeper understanding of the geometry of Hadamard spaces.
+It seems possible, but would require some non-trivial technical work, to adapt the example
+from the appendix so that the Hadamard space becomes a smooth Hadamard  manifold.
 
-On the other hand, for two convex subsets, thus in the case $k=2$,  the result of Heinz Bauschke \cite{bauschke}  does admit a generalization;  in this case, the algorithm is simple enough to be controlled explicitly, even providing an optimal rate of asymptotic regularity.
+
+On the other hand,  in the case $k=2$,  the result of Heinz Bauschke \cite{bauschke}  does admit a generalization;  in this case, the algorithm is simple enough to be controlled explicitly, even providing an optimal rate of asymptotic regularity.
 
 
 \begin{thm}{Proposition} \label{prop}
@@ -98,7 +101,7 @@ Examples given by the real axes $C_1 \subset \R^2$ and the set
 \[C_2  = \{\,(x,y):x>0, y \geq 1+ x^{ -\epsilon}\,\}\]
 reveal that the convergence rate cannot be improved to $O (n^{-\frac 1 2  -\epsilon})$ for any $\epsilon >0$. 
 
-This also shows that the optimal rate of asympotitic regularity for cyclic projections on two convex subsets is the same for the Euclidean plane and general Hadamard spaces. 
+This also shows that the optimal rate of asymptotic regularity for cyclic product of projections on two convex subsets is the same for the Euclidean plane and general Hadamard spaces. 
 
 \parbf{Acknowledgments.}
 We thank Miroslav Bačák and Nina Lebedeva for helpful comments and conversations.
@@ -131,7 +134,7 @@ The following diagram shows 3 isometric copies of $2{\times}2$-square in $X$; th
 Consider the unit segment $C_1$, $C_2$, and $C_3$ shown on the diagram;
 they all have slope $-1$ and project to each other isometrically.
 Note that each projection $P_i$ reverses the shown orientation.
-It follows that the cyclic projection $P$ sends the segment  $C_1$ to itself isometrically and changes the orientation of the segment.
+It follows that the composition  $P=P_1\circ P_2 \circ P_3$ sends the segment  $C_1$ to itself isometrically and changes the orientation of the segment.
 In particular, $P$ exchanges the ends of the segment, hence $P$ is not asymptotically regular.
 (In fact, for an end $e$ of $C_1$, and any $n$, we have $|P^n (e)\z-P^{n+1}(e)|=1$.) 
 
@@ -181,9 +184,13 @@ Therefore, $r_n = o(\tfrac1{\sqrt{n}})$.
 
 \section{Three discs}\label{sec:discs}
 
-While the cyclic projection $P$ constructed in Section~\ref{sec:tripods} is not asymptotically regular, its square $P^2$ is the identity on $C_1$, in particular, it \emph{is} asymptotically regular.
-In this appendix, we produce a cyclic projection such that any of its power is not asymptotically regular.
-Namely, we prove the following:
+While the cyclic product of projections $P$ constructed in Section~\ref{sec:tripods} is not asymptotically regular, its square $P^2$ is the identity on $C_1$, in particular, $P^2$ \emph{is} asymptotically regular.  The construction  in Section~\ref{sec:tripods}
+produces an immersion of a M\"obius band into a Hadamard space, such that the image of the immersion consists of 3 isometrically embedded rectangles.  
+In this appendix, we produce a Hadamard space which contains an embedding of a twisted  solid torus with arbitrary twisting angle, such that the  solid torus consists of
+3 isometrically embedded flat cylinders. In this case, we obtain again 3 projections onto convex sets each being isometric to a small Euclidean disc, the bottom of the corresponding cylinders.  Then  the cyclic product of these projection is the rotation of a disc by the prescribed twisting angle $\alpha$.  In  particular, any power of this 
+ cyclic product of projections may not be  asymptotically regular.  
+
+
 
 \begin{thm}{Theorem}\label{thm:powers}
 There is a cyclic projection $P$ as in Theorem~\ref{thm} such that any of its power $P^m$ is not asymptotically regular.
@@ -192,14 +199,14 @@ There is a cyclic projection $P$ as in Theorem~\ref{thm} such that any of its po
 \parit{Proof of \ref{thm:powers}.}
 We will construct a 4-dimensional Hadamard space $X$ with three convex subsets $C_1,C_2,C_3$.
 each of them is isometric to the unit disc and the composition $P\:C_1\z\to C_1$ rotates the disc by a given angle $\alpha$.
-If  $\alpha$ is irrational, then no power of $P$ is asymptotically regular.
+If  $\frac \alpha \pi$ is irrational, then no power of $P$ is asymptotically regular.
 
 Fix an angle $\alpha$ and a small $\epsilon>0$.
 Consider the closed 
 $\epsilon$-neighborhood $A$ of a closed geodesic $\gamma$ in the unit sphere~$\mathbb{S}^3$.
 By the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite {ABB-1993}, $A$ is locally CAT(1).
 The universal cover $\tilde A$ of $A$ with its induced metric is locally CAT(1) as well. 
-Since $\tilde A$ doe not contain closed geodesics, it is CAT(1), by  the generalized Hadamard--Cartan theorem, \cite{AKP,bowditch}.
+Since $\tilde A$ does not contain closed geodesics, it is CAT(1), by  the generalized Hadamard--Cartan theorem, \cite{AKP,bowditch}.
 
 Denote by $E$ the inverse image of $\gamma$ in $\tilde A$.
 The isometry group of $\tilde A$ 
