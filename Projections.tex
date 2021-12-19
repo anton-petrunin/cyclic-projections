@@ -18,7 +18,7 @@ pdfauthor={\theauthors}
 \maketitle
 
 \begin{abstract}
-We  prove that iterating projections onto convex subsets of Hadamard spaces can behave in a more complicated way than in Hilbert spaces, resolving a problem formulated by Miroslav Bačák.
+We  prove that cyclic products of  projections onto convex subsets of Hadamard spaces can behave in a more complicated way than in Hilbert spaces, resolving a problem formulated by Miroslav Bačák.
 \end{abstract}
 
 %\begin{keywords}
@@ -30,11 +30,11 @@ We  prove that iterating projections onto convex subsets of Hadamard spaces can 
 \section{Introduction}
 
 The method of cyclic  projections is a classical algorithm seeking  an intersection point of a finite family  $C_1,\dots, C_k$ of  closed convex subsets in a Hilbert  space~$X$.
-Denote by $P_i$ the closest-point projection $X\to C_i$; it sends a point $x\in X$ to the (necessarily unique) point $P_i(x)$ in $C_i$ that minimize the distance to~$x$.
+Denote by $P_i$ the closest-point projection $X\to C_i$; it sends a point $x\in X$ to the (necessarily unique) point $P_i(x)$ in $C_i$ that minimizes the distance to~$x$.
 Given a point $x\in X$ consider the sequence $x_n=P^n(x)$, where
 $P$ is the  cyclic composition of projections $P= P_1\circ \dots \circ P_k$.  The method of cyclic projections analyzes the sequence $(x_n)$, tries to find a limit point $x_{\infty}$, to show $x_{\infty} \in C_1\cap\z\dots\cap C_k$, and to understand the  rate of convergence.
 
-Let us list few results in the area.
+Let us list some results in the area.
 \emph{If the intersection  $C_1\cap \dots\cap C_k$ is non-empty, then $(x_n)$ always converges weakly to a limiting point $x_{\infty} \in  C_1\cap \dots\cap C_k$} \cite{bregman}.
 However, this convergence does not need to be strong \cite{hundal}.
 \emph{If, in addition,  $C_i$ are  linear subspaces, then the convergence is strong} \cite{vonneumann,halperin}.
@@ -59,17 +59,18 @@ and the questions discussed above about cyclic projections are absolutely meanin
 Many results discussed above have been transferred from the linear setting of Hilbert spaces
 to general Hadamard spaces.
 For instance, \emph{if the subsets $C_i$ have a non-empty intersection, then 
-the cyclic projections $x_n=P^n (x)$ converge \emph{weakly} to a point $x_{\infty} \in C_1\cap \dots\cap C_k$}
+the cyclic product of projection $P$ is asymptotically regular and, for any initial point
+$x\in X$, the sequence  $x_n=P^n (x)$ converges \emph{weakly} to a point $x_{\infty} \in C_1\cap \dots\cap C_k$}
 \cite{asymptotic, Bac2}.
 (The weak topology on Hadamard spaces is discussed in \cite{Bac, bachak-book, lytchak-petrunin}).
-Moreover, if the  subsets $C_i$ have a non-empty intersection, then the cyclic product of projections $P$ is asymptotically regular;
-the rate of convergence in this setting has been studied in \cite{KLN}.
+%Moreover, if the  subsets $C_i$ have a non-empty intersection, then the cyclic product of projections $P$ is asymptotically regular;
+The rate of convergence in this setting has been studied in \cite{KLN}.
 
 Therefore it is somewhat surprising, that the fundamental result of Heinz Bauschke [8] for (possibly) non-intersecting convex subsets $C_i$ does not admit  a generalization to the
  setting of Hadamard spaces.  The following main result of this paper provides a negative answer to  the question of Miroslav Bačák \cite[Problem 6.13]{Bac}.
 
 \begin{thm}{Theorem}\label{thm}
-There exists a Hadamard space $X$ and compact convex subsets $C_1,\dots,C_k$ in $X$ such that the composition of the closest-point projections $P\z= P_1\circ \dots \circ P_k$ is not asymptotically regular.
+There exist a Hadamard space $X$ and compact convex subsets $C_1,\dots,C_k$ in $X$ such that the composition of the closest-point projections $P\z= P_1\circ \dots \circ P_k$ is not asymptotically regular.
 \end{thm}
 
 %If the sets $C_1,\dots,C_k$ have a common intersection, then such examples are impossible \cite{asymptotic,Bac2,Bac}.
@@ -189,7 +190,7 @@ produces a M\"obius band $B$ divided into three rectangles and a map from $B$ to
 
 In this appendix, we produce a Hadamard space that contains an embedding of a twisted  solid torus with arbitrary twisting angle, such that the  solid torus consists of
 3 isometrically embedded flat cylinders.
-In this case, we obtain again 3 projections onto convex sets each being isometric to a small Euclidean disc, the bases of the cylinders.
+In this case, we obtain again 3 projections onto convex sets, each of them isometric to a  Euclidean disc, the bases of the cylinders.
 Then the cyclic product of these projections is the rotation of a disc by the prescribed twisting angle $\alpha$.
 In  particular, any power of this cyclic product of projections may not be  asymptotically regular.  
 
@@ -201,7 +202,7 @@ There is a cyclic projection $P$ as in Theorem~\ref{thm} such that any of its po
 
 \parit{Proof of \ref{thm:powers}.}
 We will construct a 4-dimensional Hadamard space $X$ with three convex subsets $C_1,C_2,C_3$.
-each of them is isometric to the unit disc and the composition $P\:C_1\z\to C_1$ rotates the disc by a given angle $\alpha$.
+Each set $C_i$ will be  isometric to a small Euclidean disc and the composition $P\:C_1\z\to C_1$ will rotate the disc by a given angle $\alpha$.
 If  $\frac \alpha \pi$ is irrational, then no power of $P$ is asymptotically regular.
 
 Fix an angle $\alpha$ and a small $\epsilon>0$.
@@ -232,7 +233,7 @@ since $Y$ is CAT(1), we get that $X$ is CAT(0); see \cite{AKP}.
 Moreover, $X$ is locally Euclidean outside its \emph{boundary} --- the cone over $B$.
 
 The cone $Z$ over the closed geodesic $G$ is  the Euclidean cone over a circle of length $2\pi +10\cdot\epsilon$.
-By construction, $Z$ is locally convex, hence a convex subset of~$X$ \cite[2.2.12]{AKP_inv}.
+By construction, $Z$ is a locally convex subset of $X$. Hence, $Z$ a convex subset of~$X$ \cite[2.2.12]{AKP_inv}.
 Let us consider a geodesic triangle
 $[q_1q_2q_3]$
 in $Z$ that surrounds the origin $o$ of the cone $Z$.
