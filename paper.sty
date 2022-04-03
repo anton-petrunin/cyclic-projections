@@ -35,10 +35,7 @@ isbn=false]{biblatex}
 \renewcommand*{\bibfont}{\small}
 \addbibresource{library.bib}
 
-\usepackage{hyperref}
-%\usepackage[notref,notcite,color]{showkeys}
-\hypersetup{colorlinks=true,citecolor=black,linkcolor=black,anchorcolor=black,filecolor=black,menucolor=black,urlcolor=black
-}
+
 
 \DeclareFieldFormat{postnote}{#1}
 \DeclareFieldFormat{multipostnote}{#1}
@@ -57,6 +54,7 @@ isbn=false]{biblatex}
 \def\endclaim{
 \par\medskip}
 \newenvironment{thm}{\claim}{\endclaim}
+
 \newcommand*{\DCto}{\begin{picture}(20,10)
 \put(1,0){$\longrightarrow$}
 \put(12,-2.5){\llap{\text{\sf\tiny DC}}}

@@ -1,11 +1,59 @@
-\documentclass[a4paper,10pt]{article}
-\usepackage{paper}
+%\newcommand{\switch}[2]{#1} %for arxiv
+\newcommand{\switch}[2]{#2} %for jota
 
-\def\thetitle{Cyclic projections in Hadamard spaces}
+\switch
+{\documentclass[a4paper,10pt]{article}
+\usepackage{paper}}%
+{
+\documentclass[smallextended,referee,envcountsect,]{svjour3}
+\usepackage{graphicx}
+\usepackage{jota}
+\journalname{JOTA}
+}
+
+\usepackage{hyperref}
+%\usepackage[notref,notcite,color]{showkeys}
+\hypersetup{colorlinks=true,citecolor=black,linkcolor=black,anchorcolor=black,filecolor=black,menucolor=black,urlcolor=black
+}
+
+\def\thetitle{\switch{Cyclic projections in Hadamard spaces}{Cyclic Projections in Hadamard Spaces}}
 \def\theauthors{Alexander Lytchak and Anton Petrunin}
 \hypersetup{
 pdftitle={\thetitle},
 pdfauthor={\theauthors}
+}
+
+\switch
+{
+\newcommand{\Addresses}{{\bigskip\footnotesize
+
+Alexander Lytchak,
+\par\nopagebreak
+\textsc{Karlsruhe Institute of Technology,
+D-76128, Karlsruhe,
+Germany}
+%\par\nopagebreak\textsc{Math. Dept. St. Petersburg State University, Universitetsky pr., 28,  Stary Peterhof, 198504, Russia.}
+  \par\nopagebreak
+  \textit{Email}: \texttt{alytchak@math.uni-koeln.de}
+
+\medskip
+
+Anton Petrunin, \par\nopagebreak\textsc{Math. Dept. PSU, University Park, PA 16802, USA.}
+\par\nopagebreak
+\textit{Email}: \texttt{petrunin@math.psu.edu}
+
+}}
+
+}{\institute{Alexander Lytchak \at
+Karlsruhe Institute of Technology,\\
+D-76128, Karlsruhe, Germany\\
+alytchak@math.uni-koeln.de
+\and
+Anton Petrunin \at
+Math. Dept. PSU, \\
+University Park, PA 16802, USA.\\
+petrunin@math.psu.edu
+}
 }
 
 \begin{document}
@@ -18,7 +66,12 @@ pdfauthor={\theauthors}
 \maketitle
 
 \begin{abstract}
-We  prove that cyclic products of  projections onto convex subsets of Hadamard spaces can behave in a more complicated way than in Hilbert spaces, resolving a problem formulated by Miroslav Bačák.
+We show that cyclic products of projections onto convex subsets of Hadamard spaces can behave in a more complicated way than in Hilbert spaces, resolving a problem formulated by Miroslav Bačák.
+Namely, we construct an example of Hadamard spaces with convex sets such that their  is not asymptotically regular.
+
+\ 
+
+\switch{}{Communicated by Aviv Gibali}
 \end{abstract}
 
 %\begin{keywords}
@@ -32,7 +85,8 @@ We  prove that cyclic products of  projections onto convex subsets of Hadamard s
 The method of cyclic  projections is a classical algorithm seeking  an intersection point of a finite family  $C_1,\dots, C_k$ of  closed convex subsets in a Hilbert  space~$X$.
 Denote by $P_i$ the closest-point projection $X\to C_i$; it sends a point $x\in X$ to the (necessarily unique) point $P_i(x)$ in $C_i$ that minimizes the distance to~$x$.
 Given a point $x\in X$ consider the sequence $x_n=P^n(x)$, where
-$P$ is the  cyclic composition of projections $P= P_1\circ \dots \circ P_k$.  The method of cyclic projections analyzes the sequence $(x_n)$, tries to find a limit point $x_{\infty}$, to show $x_{\infty} \in C_1\cap\z\dots\cap C_k$, and to understand the  rate of convergence.
+$P$ is the  cyclic composition of projections $P= P_1\circ \dots \circ P_k$.
+The method of cyclic projections analyzes the sequence $(x_n)$, tries to find a limit point $x_{\infty}$, to show $x_{\infty} \in C_1\cap\z\dots\cap C_k$, and to understand the  rate of convergence.
 
 Let us list some results in the area.
 \emph{If the intersection  $C_1\cap \dots\cap C_k$ is non-empty, then $(x_n)$ always converges weakly to a limiting point $x_{\infty} \in  C_1\cap \dots\cap C_k$} \cite{bregman}.
@@ -60,13 +114,13 @@ Many results discussed above have been transferred from the linear setting of Hi
 to general Hadamard spaces.
 For instance, \emph{if the subsets $C_i$ have a non-empty intersection, then 
 the cyclic product of projection $P$ is asymptotically regular and, for any initial point
-$x\in X$, the sequence  $x_n=P^n (x)$ converges \emph{weakly} to a point $x_{\infty} \in C_1\cap \dots\cap C_k$}
+$x\in X$, the sequence  $x_n\z=P^n (x)$ converges \emph{weakly} to a point $x_{\infty} \in C_1\cap \dots\cap C_k$}
 \cite{asymptotic, Bac2}.
 (The weak topology on Hadamard spaces is discussed in \cite{Bac, bachak-book, lytchak-petrunin}).
 %Moreover, if the  subsets $C_i$ have a non-empty intersection, then the cyclic product of projections $P$ is asymptotically regular;
 The rate of convergence in this setting has been studied in \cite{KLN}.
 
-Therefore it is somewhat surprising, that the fundamental result of Heinz Bauschke [8] for (possibly) non-intersecting convex subsets $C_i$ does not admit  a generalization to the
+Therefore it is somewhat surprising, that the fundamental result of Heinz Bauschke \cite{bauschke} for (possibly) non-intersecting convex subsets $C_i$ does not admit  a generalization to the
  setting of Hadamard spaces.  The following main result of this paper provides a negative answer to  the question of Miroslav Bačák \cite[Problem 6.13]{Bac}.
 
 \begin{thm}{Theorem}\label{thm}
@@ -87,7 +141,7 @@ from the appendix so that the Hadamard space becomes a smooth Hadamard  manifold
 
 
 On the other hand,  in the case $k=2$,  the result of Heinz Bauschke \cite{bauschke}  does admit a generalization;  in this case, the algorithm is simple enough to be controlled explicitly, even providing an optimal rate of asymptotic regularity.
-
+As it was pointed out by an anonymous referee, the following statement follows from \cite[Theorem 3.3]{asymptotic}.
 
 \begin{thm}{Proposition} \label{prop}
 Let $C_1,C_2$ be two closed convex subsets of a Hadamard space $X$.
@@ -98,7 +152,7 @@ Moreover, $|x_n-x_{n+1}| =o (\frac  {1} {\sqrt n})$ for any  $x\in X$ and $x_n \
 
 Here and further we denote by $|x-y|$ the distance between points $x$ and $y$ in any metric space, even without linear structure.
 
-Examples given by the real axes $C_1 \subset \R^2$ and the set
+Examples given by the real axis $C_1 \subset \mathbb{R}^2$ and the set
 \[C_2  = \{\,(x,y):x>0, y \geq 1+ x^{ -\epsilon}\,\}\]
 reveal that the convergence rate cannot be improved to $O (n^{-\frac 1 2  -\epsilon})$ for any $\epsilon >0$. 
 
@@ -106,47 +160,52 @@ This also shows that the optimal rate of asymptotic regularity for cyclic produc
 
 \parbf{Acknowledgments.}
 We thank Miroslav Bačák and Nina Lebedeva for helpful comments and conversations.
+Let us also thank the anonymous referees for thoughtful reading and useful suggestions.
 Alexander Lytchak was partially supported by the DFG grant, no. 281071066, TRR 191.
 Anton Petrunin was partially supported by the NSF grant, DMS-2005279.
 
 Data sharing not applicable to this article as no datasets were generated or analysed during the current study.
 %%%??? нужно для Journal of Optimization Theory and Applications
 
-\section{Three segments in a product of two tripods}\label{sec:tripods}
+\section{\switch{Three segments in a product of two tripods}{Three Segments in a Product of Two Tripods}}\label{sec:tripods}
 
-\parit{Proof \ref{thm}.}
+\switch{}{In this section we prove Theorem~\ref{thm}.}
+
+\parit{Proof\switch{ of \ref{thm}}{}.}
 A union of three unit segments that share one endpoint with the induced length metric will be called a \emph{tripod}.  
 Consider two tripods $S$ and $T$ and the product space $X= S\times T$.
-Our space $X$ is a product of two trees, thus of two Hadamard spaces. Hence $X$ is a Hadamard space.
-
-
-
-Denote by $a$, $b$, $c$ and $u$, $v$, $w$ the sides of $S$ and $T$ respectively.
 \begin{figure}[h!]
 \vskip0mm
 \centering
-\includegraphics{mppics/pic-20}
+\includegraphics{mppics/Fig20}
 \end{figure}
+Our space $X$ is a product of two trees, thus of two Hadamard spaces.
+Hence $X$ is a Hadamard space.
+
+Denote by $a$, $b$, $c$ and $u$, $v$, $w$ the sides of $S$ and $T$ respectively.
 
 The following diagram shows 3 isometric copies of $2{\times}2$-square in $X$; they are obtained as the products of two pairs of sides in $S$ and $T$ as labeled:
-\begin{figure}[ht!]
-\vskip0mm
-\centering
-\includegraphics{mppics/pic-30}
-\end{figure}
 
-Consider the unit segment $C_1$, $C_2$, and $C_3$ shown on the diagram;
+Consider the segments $C_1$, $C_2$, and $C_3$ shown on the diagram;
 they all have slope $-1$ and project to each other isometrically.
 Note that each projection $P_i$ reverses the shown orientation.
 It follows that the composition  $P=P_1\circ P_2 \circ P_3$ sends the segment  $C_1$ to itself isometrically and changes the orientation of the segment.
 In particular, $P$ exchanges the ends of the segment, hence $P$ is not asymptotically regular.
-(In fact, for an end $e$ of $C_1$, and any $n$, we have $|P^n (e)\z-P^{n+1}(e)|=1$.) 
+(In fact, for an end $e$ of $C_1$, and any $n$, we have $|P^n (e)\z-P^{n+1}(e)|=1$.)
+
+\begin{figure}[ht!]
+\vskip0mm
+\centering
+\includegraphics{mppics/Fig30}
+\end{figure}
 
 Finally, setting $C_3=\dots=C_k$ defines examples for any $k\geq 3$.\qeds
   
-\section{Two sets}
+\section{\switch{Two sets}{Two Sets}}
 
-\mbox{\parit{Proof of \ref{prop}.}}
+\switch{}{In this section we prove Proposition~\ref{prop}.}
+
+\switch{\mbox}{}{\parit{Proof\switch{ of \ref{prop}}{}.}}
 By definition, $x_n \in C_1$ for all~$n$.
 Set $y_{n+1}= P_2\circ  P^n(x)$, 
 so $y_1=P_2(x)$, $x_1=P_1(y_1)$, $y_2=P_2(x_1)$, and so on.
@@ -155,16 +214,17 @@ Further set
 r_n&:=|x_n-x_{n+1}|,\\
 s_n&:=|y_n-y_{n+1}|.
 \end{align*}
+
+\begin{wrapfigure}[12]{r}{52mm}
+\switch{\vskip-6mm}{\vskip-8mm}
+\centering
+\includegraphics{mppics/Fig10}
+\end{wrapfigure}
+
 Since the closest-point projection is nonexpanding, we get
 \[s_1 \geq r_1 \geq s_2\geq r_2\geq \dots
 \eqlbl{eq:rsrsrsrs}
 \]
-
-\begin{wrapfigure}{r}{54mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-10}
-\end{wrapfigure}
 
 Set
 \begin{align*}
@@ -177,7 +237,7 @@ Note that
 
 Since $C_1$ is convex and $x_{n}\in C_1$ lies at the minimal distance from $y_n$, we have $\measuredangle[x_{n}\,{}^{x_{n-1}}_{y_n}]\ge \tfrac\pi2$. 
 Since $X$ is a Hadamard space,
-\[r_n^2  \leq b_{n-1}^2 - a_n^2.\]
+\[r_n^2  \leq b_{n}^2 - a_{n+1}^2.\]
 Therefore, \ref{eq:abababa} implies that 
 \[\sum_{n} r_n ^2\le b_1^2.\]
 By \ref{eq:rsrsrsrs}, $r_n$ is non-increasing.
@@ -185,8 +245,9 @@ Therefore, $r_n = o(\tfrac1{\sqrt{n}})$.
 \qeds
 
 \appendix
-
-\section{Three discs}\label{sec:discs}
+\switch{\section*{Appendix: Three discs} \stepcounter{section}}%
+{\section*{Appendix: Three Discs} \stepcounter{section}}
+\label{sec:discs}
 
 While the cyclic product of projections $P$ constructed in Section~\ref{sec:tripods} is not asymptotically regular, its square $P^2$ is the identity on $C_1$, in particular, $P^2$ \emph{is} asymptotically regular.  The construction in Section~\ref{sec:tripods}
 produces a M\"obius band $B$ divided into three rectangles and a map from $B$ to a  Hadamard space that is distance-preserving on each rectangle.
@@ -209,9 +270,9 @@ Each set $C_i$ will be isometric to a Euclidean disc and the composition $P\:C_1
 If  $\frac \alpha \pi$ is irrational, then no power of $P$ is asymptotically regular.
 
 Fix an angle $\alpha$ and a small $\epsilon>0$.
-Consider the closed 
-$\epsilon$-neighborhood $A$ of a closed geodesic $\gamma$ in the unit sphere~$\mathbb{S}^3$.
-By the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite {ABB-1993}, $A$ is locally CAT(1).
+Consider the closed $\epsilon$-neighborhood $A$ of a closed geodesic $\gamma$ in the unit sphere~$\mathbb{S}^3$.
+Note that boundary of $A$ is a saddle surface in $\mathbb{S}^3$.
+Therefore, by the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite {ABB-1993}, $A$ inherits the upper curvature bound from $\mathbb{S}^3$; that is, $A$ is locally CAT(1).
 The universal cover $\tilde A$ of $A$ with its induced metric is locally CAT(1) as well. 
 Since $\tilde A$ does not contain closed geodesics, it is CAT(1), by  the generalized Hadamard--Cartan theorem
 \cite[8.13.3]{AKP}, \cite[6.8+6.9]{ballmannnotes}, \cite{bowditch}.
@@ -220,29 +281,29 @@ Denote by $E$ the inverse image of $\gamma$ in $\tilde A$.
 The isometry group of $\tilde A$ 
 contains the group of translations along $E$ and 
 the rotations that fix $E$.
-Let $T$  be the composition of translation along $E$  of length $2\pi +10\cdot\epsilon$ and the rotation by angle $\alpha$.
+Let $T$  be the composition of translation along $E$  of length $2\cdot\pi +10\cdot\epsilon$ and the rotation by angle $\alpha$.
 The element $T$ generates a discrete subgroup $\Gamma$ in the group of isometries  of $\tilde A$ that acts freely and discretely on $\tilde A$.
 
 Set $Y =\tilde A/\Gamma$.
 Since $\eps$ is small, any nontrivial element of $\Gamma$ moves
 every point of $\tilde A$ by more than $2\cdot\pi$.
-Therefore, $Y$ is a compact locally CAT(1) space that does not contain closed geodesics of length less than $2\pi$.
+Therefore, $Y$ is a compact locally CAT(1) space that does not contain closed geodesics of length less than $2\cdot\pi$.
 Hence, by  the generalized Hadamard--Cartan theorem \cite{AKP}, $Y$ is CAT(1).
 By construction, $Y$ is locally isometric to $\mathbb{S}^3$ outside its boundary $B$.
-The projection of $E$ to $Y$ is a closed geodesic $G$ of length $2\pi +10\cdot\epsilon$.
+The projection of $E$ to $Y$ is a closed geodesic $G$ of length $2\cdot\pi +10\cdot\epsilon$.
 
 Denote by $X$ the Euclidean cone over $Y$;
 since $Y$ is CAT(1), we get that $X$ is CAT(0); see \cite{AKP}.
 Moreover, $X$ is locally Euclidean outside its \emph{boundary} --- the cone over $B$.
 
-The cone $Z$ over the closed geodesic $G$ is  the Euclidean cone over a circle of length $2\pi +10\cdot\epsilon$.
+The cone $Z$ over the closed geodesic $G$ is the Euclidean cone over a circle of length $2\cdot\pi +10\cdot\epsilon$.
 By construction, $Z$ is a locally convex subset of $X$.
-Hence, $Z$ a convex subset of~$X$ \cite[2.2.12]{AKP_inv}.
+Hence, $Z$ is a convex subset of~$X$ \cite[2.2.12]{AKP_inv}.
 Let us consider a geodesic triangle
 $[q_1q_2q_3]$
 in $Z$ that surrounds the origin $o$ of the cone $Z$.
 
-By construction, the sides of triangle $[q_1q_2q_3]$ lie in the flat part of $X$.
+By construction, the sides of the triangle $[q_1q_2q_3]$ lie in the flat part of $X$.
 Thus, we can find a small $r>0$ such that the $2\cdot r$-neighborhood $U_1$ of the geodesic $[q_1q_2]$ is isometric to a convex subset of the Euclidean space.
 We can assume that $2\cdot r$-neighborhoods $U_2$ of $[q_2q_3]$ and $U_3$ of $[q_3q_1]$ have the same property.
 
@@ -263,6 +324,7 @@ As before, setting $C_3=\dots=C_k$ defines examples for any $k\geq 3$.
 \fussy
 }
 
+\switch{\Addresses}{}
 \end{document}	
 
 

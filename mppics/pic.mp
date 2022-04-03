@@ -9,7 +9,7 @@ verbatimtex
 \begin{document}
 etex
 
-filenametemplate "%j-%1c.mps";
+filenametemplate "Fig%1c.mps";
 prologues:=3;
 setarrows(barbedsharp);
 linecap:=butt;
