@@ -67,7 +67,9 @@ petrunin@math.psu.edu
 
 \begin{abstract}
 We show that cyclic products of projections onto convex subsets of Hadamard spaces can behave in a more complicated way than in Hilbert spaces, resolving a problem formulated by Miroslav Bačák.
-Namely, we construct an example of Hadamard spaces with convex sets such that their  is not asymptotically regular.
+Namely, we construct an example of convex subsets in a Hadamard space  such that the corresponding cyclic product of projections is not asymptotically regular.
+
+
 
 \ 
 
@@ -89,17 +91,17 @@ $P$ is the  cyclic composition of projections $P= P_1\circ \dots \circ P_k$.
 The method of cyclic projections analyzes the sequence $(x_n)$, tries to find a limit point $x_{\infty}$, to show $x_{\infty} \in C_1\cap\z\dots\cap C_k$, and to understand the  rate of convergence.
 
 Let us list some results in the area.
-\emph{If the intersection  $C_1\cap \dots\cap C_k$ is non-empty, then $(x_n)$ always converges weakly to a limiting point $x_{\infty} \in  C_1\cap \dots\cap C_k$} \cite{bregman}.
+\emph{If the intersection  $C_1\cap \dots\cap C_k$ is non-empty, then $(x_n)$ always converges weakly to some point in $C_1\cap \dots\cap C_k$} \cite{bregman}.
 However, this convergence does not need to be strong \cite{hundal}.
 \emph{If, in addition,  $C_i$ are  linear subspaces, then the convergence is strong} \cite{vonneumann,halperin}.
 If the intersection  $C_1\cap \dots\cap C_k$ is not assumed to be non-empty,  the analysis of the sequence $(x_n)$ is more complicated.
 However, in \cite{bauschke} it has been established that the cyclic product $P= P_1\circ \dots \circ P_k$ is \emph{asymptotically regular};
 by definition, this means, that for any starting point  $x\in X$, we have  $|x_n-x_{n+1}|\to 0$ as $n\to \infty$.
 The rates of convergence, respectively, the rates of asymptotic regularity have been investigated in several works, see, for instance \cite{bauschke-borwein-lewis, Kohlenbach}.
-For further reference, see \cite{bauschke-borwein-lewis, deutsch, Bac, Bac2}
+For further reference, see \cite{bauschke-borwein-lewis, deutsch, Bac, Bac2, AFLN}.
 
 More recently, the method of cyclic  projections has been investigated beyond the setting of Hilbert spaces in so-called Hadamard spaces (also known as CAT(0) spaces, or globally non-positively curved spaces in the sense of Alexandrov).
-This class of metric spaces includes hyperbolic spaces, metric trees, as well as complete simply connected Riemannian manifolds of non-positive curvature;
+This class of metric spaces includes hyperbolic spaces, metric trees, as well as complete simply-connected Riemannian manifolds of non-positive curvature;
 it has played an important role in many areas of mathematics  in the last decades.
 We assume some familiarity with Hadamard spaces, refer the reader to \cite{ballmannnotes,ballmannbook, BBI,BH,AKP,AKP_inv} as general references on this subject.
 For the introduction and applications of the method of cyclic projections in Hadamard spaces,
@@ -140,10 +142,10 @@ It seems possible, but would require some non-trivial technical work, to adapt t
 from the appendix so that the Hadamard space becomes a smooth Hadamard  manifold.
 
 
-On the other hand,  in the case $k=2$,  the result of Heinz Bauschke \cite{bauschke}  does admit a generalization;  in this case, the algorithm is simple enough to be controlled explicitly, even providing an optimal rate of asymptotic regularity.
-As it was pointed out by an anonymous referee, the following statement follows from \cite[Theorem 3.3]{asymptotic}.
+On the other hand,  in the case $k=2$,  the result of Heinz Bauschke \cite{bauschke}  does admit a generalization;  in this case, the algorithm is sufficiently simple to be controlled explicitly, even providing an optimal rate of asymptotic regularity.
+As it was pointed out by an anonymous referee, the following statement follows from \cite[Theorem 3.3]{asymptotic}, under the additional assumption of the existence of a fixed point of the composition $P$.
 
-\begin{thm}{Proposition} \label{prop}
+\begin{thm}{Proposition}\label{prop}
 Let $C_1,C_2$ be two closed convex subsets of a Hadamard space $X$.
 Then the composition $P\z=  P_1\circ P_2$ is asymptotically  regular.
 
@@ -154,18 +156,17 @@ Here and further we denote by $|x-y|$ the distance between points $x$ and $y$ in
 
 Examples given by the real axis $C_1 \subset \mathbb{R}^2$ and the set
 \[C_2  = \{\,(x,y):x>0, y \geq 1+ x^{ -\epsilon}\,\}\]
-reveal that the convergence rate cannot be improved to $O (n^{-\frac 1 2  -\epsilon})$ for any $\epsilon >0$. 
+reveal that the convergence rate in Proposition~\ref{prop} cannot be improved to $O (n^{-\frac 1 2  -\epsilon})$ for any $\epsilon >0$. 
 
 This also shows that the optimal rate of asymptotic regularity for cyclic product of projections on two convex subsets is the same for the Euclidean plane and general Hadamard spaces. 
 
+\switch{
 \parbf{Acknowledgments.}
 We thank Miroslav Bačák and Nina Lebedeva for helpful comments and conversations.
-Let us also thank the anonymous referees for thoughtful reading and useful suggestions.
+Let us also thank the anonymous referees for careful reading and useful suggestions.
 Alexander Lytchak was partially supported by the DFG grant, no. 281071066, TRR 191.
 Anton Petrunin was partially supported by the NSF grant, DMS-2005279.
-
-Data sharing not applicable to this article as no datasets were generated or analysed during the current study.
-%%%??? нужно для Journal of Optimization Theory and Applications
+}{}
 
 \section{\switch{Three segments in a product of two tripods}{Three Segments in a Product of Two Tripods}}\label{sec:tripods}
 
@@ -184,7 +185,13 @@ Hence $X$ is a Hadamard space.
 
 Denote by $a$, $b$, $c$ and $u$, $v$, $w$ the sides of $S$ and $T$ respectively.
 
-The following diagram shows 3 isometric copies of $2{\times}2$-square in $X$; they are obtained as the products of two pairs of sides in $S$ and $T$ as labeled:
+The following diagram shows 3 isometric copies of $2{\times}2$-square in $X$; they are obtained as the products of two pairs of sides in $S$ and $T$ as labeled.
+
+\begin{figure}[ht!]
+\vskip0mm
+\centering
+\includegraphics{mppics/Fig30}
+\end{figure}
 
 Consider the segments $C_1$, $C_2$, and $C_3$ shown on the diagram;
 they all have slope $-1$ and project to each other isometrically.
@@ -192,12 +199,6 @@ Note that each projection $P_i$ reverses the shown orientation.
 It follows that the composition  $P=P_1\circ P_2 \circ P_3$ sends the segment  $C_1$ to itself isometrically and changes the orientation of the segment.
 In particular, $P$ exchanges the ends of the segment, hence $P$ is not asymptotically regular.
 (In fact, for an end $e$ of $C_1$, and any $n$, we have $|P^n (e)\z-P^{n+1}(e)|=1$.)
-
-\begin{figure}[ht!]
-\vskip0mm
-\centering
-\includegraphics{mppics/Fig30}
-\end{figure}
 
 Finally, setting $C_3=\dots=C_k$ defines examples for any $k\geq 3$.\qeds
   
@@ -216,7 +217,7 @@ s_n&:=|y_n-y_{n+1}|.
 \end{align*}
 
 \begin{wrapfigure}[12]{r}{52mm}
-\switch{\vskip-6mm}{\vskip-8mm}
+\switch{\vskip-0mm}{\vskip-9mm}
 \centering
 \includegraphics{mppics/Fig10}
 \end{wrapfigure}
@@ -244,6 +245,23 @@ By \ref{eq:rsrsrsrs}, $r_n$ is non-increasing.
 Therefore, $r_n = o(\tfrac1{\sqrt{n}})$.
 \qeds
 
+\switch{}{
+\section{Conclusions}
+
+We have shown that  a cyclic product of $k\ge 3$ projections onto convex subsets of a Hadamard space does not need to be asymptotically regular, even
+if the convex subsets involved are compact. This should be seen in contrast to the asymptotic regularity of such maps in Hilbert spaces and to the fact that many other results
+about cyclic projections generalize easily from the linear setting to the setting of Hadamard spaces.  On the other hand, we show that a cyclic product of two projections to convex subsets of Hadamard spaces  must always be  asymptotically regular.  
+
+\begin{acknowledgements}
+We thank Miroslav Bačák and Nina Lebedeva for helpful comments and conversations.
+Let us also thank the anonymous referees for careful reading and useful suggestions.
+
+Alexander Lytchak was partially supported by the DFG grant, no. 281071066, TRR 191.
+Anton Petrunin was partially supported by the NSF grant, DMS-2005279.
+Data sharing not applicable to this article as no datasets were generated or analysed during the current study.
+%%%??? нужно для Journal of Optimization Theory and Applications
+\end{acknowledgements}
+}
 \appendix
 \switch{\section*{Appendix: Three discs} \stepcounter{section}}%
 {\section*{Appendix: Three Discs} \stepcounter{section}}
@@ -256,7 +274,7 @@ In this appendix, we produce a Hadamard space that contains an embedding of a tw
 3 isometrically embedded flat cylinders.
 In this case, we obtain again 3 projections onto convex sets, each of them isometric to a  Euclidean disc, the bases of the cylinders.
 Then the cyclic product of these projections is the rotation of a disc by the prescribed twisting angle $\alpha$.
-In  particular, any power of this cyclic product of projections may not be  asymptotically regular.  
+In  particular, if $\tfrac \alpha \pi$ is irrational, then any power of this cyclic product of projections may not be  asymptotically regular.  
 
 
 
@@ -265,14 +283,12 @@ There is a cyclic projection $P$ as in Theorem~\ref{thm} such that any of its po
 \end{thm}
 
 \parit{Proof of \ref{thm:powers}.}
-We will construct a 4-dimensional Hadamard space $X$ with three convex subsets $C_1,C_2,C_3$.
-Each set $C_i$ will be isometric to a Euclidean disc and the composition $P\:C_1\z\to C_1$ will rotate the disc by a given angle $\alpha$.
-If  $\frac \alpha \pi$ is irrational, then no power of $P$ is asymptotically regular.
-
 Fix an angle $\alpha$ and a small $\epsilon>0$.
 Consider the closed $\epsilon$-neighborhood $A$ of a closed geodesic $\gamma$ in the unit sphere~$\mathbb{S}^3$.
-Note that boundary of $A$ is a saddle surface in $\mathbb{S}^3$.
-Therefore, by the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite {ABB-1993}, $A$ inherits the upper curvature bound from $\mathbb{S}^3$; that is, $A$ is locally CAT(1).
+Note that the boundary of $A$ is a saddle surface in $\mathbb{S}^3$;
+hence it has curvature bounded from above by 1.
+Thus, $A$ is a compact Riemannian manifold with boundary, such that the curvature of the interior and of the boundary is bounded from above by 1.
+Therefore, by the result of Stephanie Alexander,  David Berg, and Richard Bishop \cite {ABB-1993}, \textit{$A$ equipped with the induced intrinsic metric is locally} CAT(1).
 The universal cover $\tilde A$ of $A$ with its induced metric is locally CAT(1) as well. 
 Since $\tilde A$ does not contain closed geodesics, it is CAT(1), by  the generalized Hadamard--Cartan theorem
 \cite[8.13.3]{AKP}, \cite[6.8+6.9]{ballmannnotes}, \cite{bowditch}.
@@ -312,7 +328,7 @@ By construction, $C_i$ and $C_{i+1}$, for $i=1,2,3\pmod 3$   are contained in~$U
 Since $Z$ is convex, $C_i$ and $C_{i+1}$ are \emph{parallel} inside $U_i$, thus their convex hull  $Q_i$ is isometric to the  cylinder $C_i \times [q_i,q_{i+1}]$ with bottom and top $C_i$ and $C_{i+1}$.
 In particular, the projection $P_i$ defines an isometry $C_{i+1}\to C_{i}$.
 
-By construction, the composition $P=P_1\circ P_2\circ P_3\:C_1\to C_1$ rotates $C_1$ by angle $\alpha$.
+By construction, the composition $P=P_1\circ P_2\circ P_3\colon C_1\to C_1$ rotates $C_1$ by angle $\alpha$.
 If $\tfrac\alpha\pi$ is irrational, then $P$, as well as all its powers, are \emph{not} asymptotically regular.
 
 As before, setting $C_3=\dots=C_k$ defines examples for any $k\geq 3$.
@@ -324,7 +340,8 @@ As before, setting $C_3=\dots=C_k$ defines examples for any $k\geq 3$.
 \fussy
 }
 
-\switch{\Addresses}{}
+\switch{%\Addresses
+}{}
 \end{document}	
 
 
